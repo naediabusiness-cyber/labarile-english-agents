@@ -1,0 +1,37 @@
+{
+  "name": "labarile-agents",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Labarile English — agents IA : Instagram (DM + stories), mails + setting, support client.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "next typegen && tsc --noEmit",
+    "brain:push": "node scripts/push-brain.mjs"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.129.0",
+    "@supabase/supabase-js": "^2.117.2",
+    "imapflow": "^2.1.2",
+    "libphonenumber-js": "^1.13.14",
+    "mailparser": "^3.9.31",
+    "next": "^16.2.9",
+    "nodemailer": "^10.0.12",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/mailparser": "^3.9.0",
+    "@types/node": "^20.19.43",
+    "@types/nodemailer": "^8.0.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.9",
+    "typescript": "^6.0.3"
+  }
+}

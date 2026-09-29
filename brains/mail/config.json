@@ -1,0 +1,21 @@
+{
+  "categories": [
+    { "id": "prospect", "label": "Prospect", "action": "reply" },
+    { "id": "question", "label": "Question", "action": "reply" },
+    { "id": "partenariat", "label": "Partenariat / presse", "action": "escalate" },
+    { "id": "support", "label": "Support client", "action": "forward_support" },
+    { "id": "spam", "label": "Spam / newsletter", "action": "ignore" }
+  ],
+  "bookingLink": "[À REMPLIR : lien de réservation, ex. Calendly]",
+  "signature": "[À REMPLIR : signature des mails, ex. prénom, fonction, Labarile English, site web]",
+  "escalateWhen": [
+    "Demande de partenariat, presse, influence ou sponsoring",
+    "Entreprise qui souhaite former plusieurs salariés",
+    "La personne demande à parler à Luc ou à un humain",
+    "Question factuelle sans réponse dans les cerveaux (prix précis, financement, contrat, facture)",
+    "Colère, menace, menace juridique ou d'avis négatif",
+    "Détresse, santé ou situation personnelle sensible",
+    "Doute sur la catégorie du mail",
+    "Mail rédigé dans une autre langue que le français ou l'anglais"
+  ]
+}

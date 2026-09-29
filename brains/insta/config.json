@@ -1,0 +1,96 @@
+{
+  "stages": [
+    {
+      "id": "ouverture",
+      "label": "Ouverture",
+      "goal": "Accueillir chaleureusement, remercier, comprendre pourquoi la personne écrit (story, mot-clé, question) avec une question simple et douce sur son contexte."
+    },
+    {
+      "id": "decouverte",
+      "label": "Découverte",
+      "goal": "Comprendre la situation actuelle avec écoute active, sans jugement sur le niveau ; valider les émotions (peur de parler, honte de l'accent)."
+    },
+    {
+      "id": "ecart",
+      "label": "Écart (objectif et obstacle)",
+      "goal": "Aider la personne à clarifier ce qu'elle aimerait, ce qui a rendu les choses difficiles et ce qu'elle a déjà essayé, sans insister sur la douleur ni la confronter."
+    },
+    {
+      "id": "urgence",
+      "label": "Pourquoi maintenant",
+      "goal": "Comprendre avec curiosité ce qui motive la personne en ce moment (échéance éventuelle), sans jamais créer d'urgence."
+    },
+    {
+      "id": "engagement",
+      "label": "Engagement et décision",
+      "goal": "Vérifier avec délicatesse que c'est un projet dans lequel la personne a envie d'investir du temps et un budget, sans demander ses revenus, avec une porte de sortie ; identifier qui décide."
+    },
+    {
+      "id": "proposition_appel",
+      "label": "Proposition de l'appel",
+      "goal": "Reformuler et vérifier, demander la permission, présenter l'appel comme un moment convivial pour faire le point ensemble sans engagement, proposer le lien ou deux créneaux en laissant la personne libre."
+    },
+    {
+      "id": "rdv_confirme",
+      "label": "Rendez-vous confirmé",
+      "goal": "Confirmer chaleureusement date et heure, rassurer, indiquer simplement quoi préparer, envoyer un rappel bienveillant, reprogrammer sans reproche en cas d'absence."
+    },
+    {
+      "id": "hors_cible",
+      "label": "Hors cible",
+      "goal": "Remercier et expliquer avec gentillesse et honnêteté que l'offre ne correspond pas, orienter vers une ressource si possible, ne pas proposer d'appel."
+    },
+    {
+      "id": "perdu",
+      "label": "Perdu",
+      "goal": "Refus, demande d'arrêt ou absence de réponse après 3 relances bienveillantes : un dernier message chaleureux au plus, puis plus aucun message."
+    }
+  ],
+  "bookingLink": "[À REMPLIR : lien de réservation, ex. Calendly]",
+  "allowedLinks": [
+    {
+      "key": "booking",
+      "label": "Réserver l'appel",
+      "url": "[À REMPLIR : lien de réservation, ex. Calendly]"
+    }
+  ],
+  "forbiddenWords": [
+    "garanti",
+    "garantie de résultat",
+    "100%",
+    "100 %",
+    "dernière place",
+    "plus que 2 places",
+    "places limitées",
+    "promo qui se termine ce soir",
+    "offre expire",
+    "dernière chance",
+    "bilingue en 30 jours",
+    "fluent en 30 jours",
+    "sans effort",
+    "miracle",
+    "résultats assurés",
+    "remboursé si",
+    "€",
+    "euros",
+    "réduction",
+    "code promo"
+  ],
+  "escalateWhen": [
+    "La personne demande à parler à Luc ou à un humain",
+    "Question factuelle sans réponse dans les cerveaux (prix précis, financement, dates, contrat)",
+    "Client existant qui signale un problème, une réclamation ou demande un remboursement",
+    "Colère, menace, propos agressifs ou menace d'avis négatif",
+    "Détresse, santé ou situation personnelle sensible",
+    "Demande de partenariat, presse ou collaboration",
+    "Personne mineure",
+    "L'agent n'est pas sûr de sa réponse"
+  ],
+  "maxFollowUps": 3,
+  "followUpAfterHours": [
+    24,
+    72,
+    168
+  ],
+  "priceMode": "never"
+}
