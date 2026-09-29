@@ -12,8 +12,8 @@ const FIELDS = [
   ["accent", "Couleur logo (bouton d'appel à l'action, une fois par story)", "color"],
   ["background", "Blanc (fond)", "color"],
   ["text", "Texte sur fond clair", "color"],
-  ["logoUrl", "Logo complet, version foncée (URL d'un PNG transparent)", "url"],
-  ["logoWhiteUrl", "Logo complet, version blanche (URL d'un PNG transparent)", "url"],
+  ["logoUrl", "Autre logo pour fond clair (facultatif : sinon logo de la charte)", "url"],
+  ["logoWhiteUrl", "Autre logo pour fond foncé (facultatif : sinon logo blanc de la charte)", "url"],
 ] as const;
 
 export default async function Settings() {
@@ -30,7 +30,7 @@ export default async function Settings() {
             <input id={k} name={k} type={type} defaultValue={brand[k]} style={type === "color" ? { width: 90, height: 40, padding: 2 } : undefined} />
           </div>
         ))}
-        <p className="small muted">Valeurs par défaut : charte graphique v2.0. Polices intégrées (Bebas Neue, Roboto, Roboto Mono). Pour le logo : le déposer dans Supabase → Storage → bucket « photos » (dossier <code>logo/</code>) et coller ici son adresse publique.</p>
+        <p className="small muted">Valeurs par défaut : charte graphique v2.0. Polices intégrées (Bebas Neue, Roboto, Roboto Mono). Les logos de la charte sont intégrés (couleur sur fond clair, blanc sur fond foncé) ; ne remplir les champs logo que pour en utiliser un autre.</p>
         <button className="primary" type="submit" style={{ marginTop: 10 }}>Enregistrer</button>
       </form>
 

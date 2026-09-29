@@ -1,6 +1,6 @@
 # Exemples de stories
 
-Huit exemples qui respectent la ligne éditoriale (titre ≤ 32 caractères, affiché en capitales ; texte ≤ 160 caractères ; vouvoiement). Quand le `ctaKeyword` de `config.json` sera défini, les CTA « Réservez votre entretien (lien en bio) » pourront devenir « Envoyez MOT-CLÉ en DM ».
+Huit exemples qui respectent la ligne éditoriale (titre ≤ 32 caractères, affiché en capitales ; texte ≤ 160 caractères ; vouvoiement). Le CTA principal est « Envoyez ENGLISH en DM » (`ctaKeyword`) ; « Réservez votre entretien (lien en bio) » sert à varier.
 
 ## 1. Erreur fréquente
 

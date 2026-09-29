@@ -22,14 +22,14 @@ const Batch = z.object({
       template: z.enum(TEMPLATES),
       title: z.string().describe("≤ 40 caractères"),
       body: z.string().describe("≤ 160 caractères"),
-      cta: z.string().describe("Appel à l'action court (ex. « Écris ANGLAIS en DM »), ou vide"),
+      cta: z.string().describe("Appel à l'action court (ex. « Envoyez ENGLISH en DM »), ou vide"),
     }),
   ),
 });
 
 const RULES = `Tu es l'agent stories Instagram de Labarile English. Tu écris le texte des stories du jour, en français, selon la ligne éditoriale ci-dessous.
 Règles : titre ≤ 40 caractères, texte ≤ 160 caractères, une idée par story, aucun témoignage ni chiffre inventé, aucun emoji (le rendu graphique ne les affiche pas), ne reprends pas un sujet déjà publié récemment.
-Tu ne dois jamais utiliser une information marquée « [À REMPLIR ». Si le mot-clé du CTA n'est pas renseigné, utilise « Écris-moi en DM ».`;
+Tu ne dois jamais utiliser une information marquée « [À REMPLIR ». Le CTA principal est « Envoyez <ctaKeyword> en DM » (mot-clé des réglages) ; « Réservez votre entretien (lien en bio) » sert à varier.`;
 
 export function storyImageUrl(appUrl: string, id: string): string {
   return `${appUrl.replace(/\/$/, "")}/api/stories/${id}/image?v=${Date.now()}`;

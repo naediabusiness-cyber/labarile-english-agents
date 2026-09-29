@@ -39,6 +39,17 @@ async function fonts(): Promise<Fonts> {
   return fontsCache;
 }
 
+/** Logos extraits de la charte (lib/brand) : version couleur sur fond clair, blanche sur fond foncé. */
+const logoCache: Record<string, string> = {};
+async function bundledLogo(dark: boolean): Promise<string> {
+  const file = dark ? "logo-blanc.png" : "logo-couleur.png";
+  if (!logoCache[file]) {
+    const b = await readFile(join(process.cwd(), "lib", "brand", file));
+    logoCache[file] = `data:image/png;base64,${b.toString("base64")}`;
+  }
+  return logoCache[file];
+}
+
 /** Fond et couleurs de chaque gabarit (fonds clairs : Blanc / Clair 01 ; fonds foncés : Profond 04 / 05). */
 function theme(template: string, brand: Brand, hasPhoto: boolean) {
   if (hasPhoto || template === "citation" || template === "appel") return { bg: brand.primary, fg: "#ffffff", dark: true };
@@ -51,7 +62,7 @@ export async function renderStory(s: StoryContent, brand: Brand): Promise<ImageR
   const t = theme(s.template, brand, !!s.photo_url);
   const title = s.template === "citation" ? `« ${s.title} »` : s.title;
   const titleSize = title.length > 26 ? 150 : title.length > 16 ? 180 : 210;
-  const logo = t.dark ? brand.logoWhiteUrl : brand.logoUrl;
+  const logo = (t.dark ? brand.logoWhiteUrl : brand.logoUrl) || (await bundledLogo(t.dark));
 
   return new ImageResponse(
     (
@@ -70,7 +81,7 @@ export async function renderStory(s: StoryContent, brand: Brand): Promise<ImageR
           <div style={{ display: "flex", alignItems: "center" }}>
             {logo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={logo} alt="" height={110} style={{ objectFit: "contain" }} />
+              <img src={logo} alt="" height={170} style={{ objectFit: "contain" }} />
             ) : (
               <div style={{ display: "flex", alignItems: "baseline", gap: 18 }}>
                 <div style={{ fontFamily: "Bebas", fontSize: 92, letterSpacing: 4, lineHeight: 1 }}>LABARILE</div>

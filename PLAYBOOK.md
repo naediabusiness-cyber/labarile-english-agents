@@ -101,11 +101,10 @@ Aller dans **Installation** → étapes 1 et 2 cochées → **étape 3 : Enregis
 
 1. Les cerveaux sont déjà remplis avec les vrais éléments de Labarile English (site, FAQ, CGV, avis Trustpilot,
    lien de réservation iClosed, pas de CPF) : voir `brains/SOURCES-labarile.md`. **Relire avec Luc** et corriger si besoin.
-   Il reste 9 `[À REMPLIR : …]` :
+   Il reste 8 `[À REMPLIR : …]` :
    1. la durée de l'entretien de candidature (`insta/03-offre.md`, `insta/01-methode.md`, `mail/03-reponses-types.md`) ;
    2. de **vrais DM de Luc** (`insta/02-voix.md`) et de vraies conversations annotées (`insta/05-exemples.md`) ;
    3. de vrais mails de l'équipe (`mail/02-voix.md`) ;
-   4. le mot-clé que les gens envoient en DM après une story (`stories/config.json` → `ctaKeyword`).
 2. Pousser : `npm run brain:push`
 3. On peut aussi tout modifier ensuite dans **Cerveaux** du tableau de bord.
 
@@ -167,9 +166,8 @@ Autres fournisseurs (OVH, Ionos, Zoho…) : utiliser leurs adresses IMAP/SMTP. O
 
 ## Phase 9 — Stories (publication Instagram)
 
-1. **Identité graphique** : la charte v2.0 est déjà intégrée (couleurs, Bebas Neue / Roboto / Roboto Mono).
-   Il reste à ajouter le **logo** : deux PNG transparents (version foncée et version blanche), à déposer dans
-   Supabase → Storage → bucket `photos` → dossier `logo/`, puis coller leurs adresses publiques dans Réglages.
+1. **Identité graphique** : déjà intégrée. Charte v2.0 : couleurs, polices (Bebas Neue / Roboto / Roboto Mono) et logos
+   extraits du PDF de la charte (`lib/brand/`) : logo couleur sur fond clair, logo blanc sur fond foncé. Rien à faire.
 2. **Photos de Luc** : télécharger le dossier Google Drive des photos (clic droit → Télécharger), le dézipper, puis :
    ```bash
    npm run photos:push -- ~/Downloads/<dossier-des-photos>
