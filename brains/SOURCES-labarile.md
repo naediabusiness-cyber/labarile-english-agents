@@ -1,6 +1,6 @@
 # Faits Labarile English (sources : site, FAQ, CGV, Trustpilot, charte) — relevé du 29/09/2026
 
-## Donnés par Nadia (cliente)
+## Informations fournies pour le projet
 - Lien de prise de rendez-vous à donner aux leads : https://app.iclosed.io/e/luclabarile/parle-anglais-sous-90-jours-labarile-english-dm
 - Labarile English N'ACCEPTE PAS le CPF (ni financement CPF).
 
