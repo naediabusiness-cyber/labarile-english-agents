@@ -7,6 +7,7 @@ import { createDraft, sendDraft } from "../drafts";
 import { getModes, getSetting, setSetting, isQuietHours, parisTime, type Mode } from "../settings";
 import * as pk from "../plugkit";
 import * as tg from "../telegram";
+import { iclosedEnabled, nextSlots, validTimeZone, type Availability } from "../iclosed";
 
 /**
  * Agent INSTA : lit les DM (PlugKit), décide avec Claude + le cerveau « insta », propose ou envoie.
@@ -22,6 +23,16 @@ const Decision = z.object({
   fields: z.array(z.object({ key: z.string(), value: z.string() })).describe("Ce que tu as appris sur la personne (prénom, objectif, niveau, urgence, disponibilités…)"),
   reason: z.string().describe("Une phrase pour Luc : pourquoi cette décision"),
   summary: z.string().describe("Résumé de la conversation en 2 phrases"),
+  timezone: z.string().describe("Fuseau horaire IANA du prospect déduit de ce qu'il a dit (ex. Europe/Paris, Europe/Zurich, America/Montreal), vide si inconnu"),
+  booking: z
+    .object({
+      slot_utc: z.string().describe("Identifiant EXACT d'un créneau de la liste CRÉNEAUX iCLOSED"),
+      email: z.string(),
+      first_name: z.string(),
+      last_name: z.string(),
+    })
+    .nullable()
+    .describe("À remplir seulement quand le prospect a accepté un créneau de la liste ET qu'on a son prénom, son nom et son email. Sinon null."),
 });
 type Decision = z.infer<typeof Decision>;
 
@@ -47,7 +58,14 @@ Règles qui priment sur tout :
 - Si la personne est mineure, en détresse, agressive, parle d'un sujet sensible, demande un humain, ou si tu n'es pas sûr : action "escalate".
 - Si la personne demande d'arrêter : action "stop_contact".
 - Si le dernier message n'appelle pas de réponse (ex. « ok merci 👍 » après confirmation du rendez-vous) : action "wait".
-- Ne répète jamais une phrase ou une ouverture déjà envoyée dans la conversation.`;
+- Ne répète jamais une phrase ou une ouverture déjà envoyée dans la conversation.
+
+Prise de rendez-vous (quand des CRÉNEAUX iCLOSED sont fournis plus bas) :
+- Au moment de proposer l'entretien, ne donne pas le lien : propose les 2 premiers créneaux de la liste, à l'heure du prospect, en nommant sa ville ou son fuseau (ex. « demain à 10h30, heure de Genève, ou jeudi à 14h ? »).
+- Ne propose JAMAIS un créneau absent de la liste, et ne change pas l'heure.
+- Si tu ne sais pas où vit le prospect (donc son fuseau), demande-le simplement avant de proposer des horaires. Si la conversation montre qu'il est en France, Suisse ou Belgique, le fuseau est Europe/Paris, Europe/Zurich ou Europe/Brussels.
+- Quand il accepte un créneau, demande ce qui manque parmi prénom, nom et email (en une seule question). Dès que tu as les trois et le créneau accepté, remplis booking (slot_utc = identifiant exact) et écris la confirmation : la réservation se fait au moment où le message part.
+- Si aucun créneau ne lui convient, ou s'il n'y a pas de créneaux, envoie le lien de réservation.`;
 
 function transcript(msgs: { direction: string; text: string; created_at: string }[]): string {
   return msgs
@@ -55,7 +73,7 @@ function transcript(msgs: { direction: string; text: string; created_at: string 
     .join("\n");
 }
 
-async function askClaude(brain: Brain, conv: Conv, task: string, feedback?: string): Promise<Decision> {
+async function askClaude(brain: Brain, conv: Conv, task: string, feedback?: string, avail?: Availability | null): Promise<Decision> {
   const { data: msgs } = await db()
     .from("ig_messages")
     .select("direction,text,created_at")
@@ -68,6 +86,12 @@ async function askClaude(brain: Brain, conv: Conv, task: string, feedback?: stri
     `Étape actuelle : ${conv.stage}`,
     `Fiche : ${JSON.stringify(conv.fields)}`,
     `Relances déjà envoyées : ${conv.follow_ups}`,
+    `Fuseau du prospect : ${conv.fields.fuseau ? conv.fields.fuseau : "inconnu (à demander avant de proposer des horaires)"}`,
+    ...(avail
+      ? avail.slots.length
+        ? [`CRÉNEAUX iCLOSED libres (heure du prospect, fuseau ${avail.timeZone}) :`, ...avail.slots.map((s) => `- ${s.label} → identifiant ${s.utc}`)]
+        : ["CRÉNEAUX iCLOSED : aucun créneau libre dans les 48 h, utilise le lien de réservation."]
+      : []),
     "",
     "Conversation (du plus ancien au plus récent) :",
     transcript((msgs ?? []).reverse()),
@@ -173,14 +197,25 @@ async function handle(conv: Conv, brain: Brain, mode: Mode, kind: "reply" | "fol
     ...configValue<{ url: string }[]>(brain, "allowedLinks", []).map((l) => l.url),
   ];
 
+  // Créneaux iClosed : seulement quand on approche de la prise de rendez-vous (évite des appels inutiles).
+  let avail: Availability | null = null;
+  const bookingLink = configValue<string>(brain, "bookingLink", "");
+  if (iclosedEnabled() && bookingLink && ["ecart", "urgence", "engagement", "proposition_appel", "rdv_confirme"].includes(conv.stage)) {
+    try {
+      avail = await nextSlots(bookingLink, conv.fields.fuseau || "Europe/Paris");
+    } catch (e) {
+      await logEvent("insta", `${conv.name} : créneaux iClosed indisponibles (${e instanceof Error ? e.message : e}), lien de secours.`, "error");
+    }
+  }
+
   let decision: Decision;
   let problems: string[] = [];
   try {
-    decision = await askClaude(brain, conv, task);
+    decision = await askClaude(brain, conv, task, undefined, avail);
     if (decision.action === "reply") {
       problems = checkOutgoing(decision.message, { forbiddenWords, allowedUrls, maxLength: 1000, channel: "dm" });
       if (problems.length) {
-        decision = await askClaude(brain, conv, task, problems.join(" ; "));
+        decision = await askClaude(brain, conv, task, problems.join(" ; "), avail);
         problems = decision.action === "reply" ? checkOutgoing(decision.message, { forbiddenWords, allowedUrls, maxLength: 1000, channel: "dm" }) : [];
       }
     }
@@ -194,7 +229,28 @@ async function handle(conv: Conv, brain: Brain, mode: Mode, kind: "reply" | "fol
     return true;
   }
 
-  const fields = { ...conv.fields, ...Object.fromEntries(decision.fields.map((f) => [f.key, f.value])) };
+  const fields: Record<string, string> = { ...conv.fields, ...Object.fromEntries(decision.fields.map((f) => [f.key, f.value])) };
+  if (decision.timezone && validTimeZone(decision.timezone)) fields.fuseau = decision.timezone;
+
+  // Réservation demandée : on vérifie qu'elle est exacte avant de l'attacher au brouillon.
+  let booking: Record<string, unknown> | null = null;
+  if (decision.action === "reply" && decision.booking) {
+    const b = decision.booking;
+    const slot = avail?.slots.find((s) => s.utc === b.slot_utc);
+    if (!slot) problems.push("créneau de réservation absent de la liste iClosed : réservation non faite");
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(b.email.trim()) || !b.first_name.trim() || !b.last_name.trim()) problems.push("prénom, nom ou email manquant : réservation non faite");
+    else
+      booking = {
+        utc: slot.utc,
+        label: slot.label,
+        timeZone: avail!.timeZone,
+        email: b.email.trim(),
+        firstName: b.first_name.trim(),
+        lastName: b.last_name.trim(),
+        hostIds: avail!.hostIds,
+        bookingLink,
+      };
+  }
   await db()
     .from("ig_conversations")
     .update({ stage: decision.stage, fields, summary: decision.summary, last_decided_id: last.id })
@@ -220,7 +276,7 @@ async function handle(conv: Conv, brain: Brain, mode: Mode, kind: "reply" | "fol
   const canAuto = mode === "auto" && inWindow && problems.length === 0 && !(await isQuietHours());
   const header = `<b>${tg.esc(conv.name)}</b> · étape ${tg.esc(decision.stage)}${kind === "followup" ? " · relance" : ""}${
     inWindow ? "" : "\n⚠️ Hors fenêtre 24 h : à envoyer depuis le téléphone"
-  }\n<i>Dernier message :</i> ${tg.esc(last.text.slice(0, 300))}`;
+  }${booking ? `\n📅 <b>Réservation iClosed à l'envoi</b> : ${tg.esc(String(booking.label))} (${tg.esc(String(booking.timeZone))}), ${tg.esc(String(booking.email))}` : ""}\n<i>Dernier message :</i> ${tg.esc(last.text.slice(0, 300))}`;
 
   const draft = await createDraft({
     channel: "insta",
@@ -231,6 +287,7 @@ async function handle(conv: Conv, brain: Brain, mode: Mode, kind: "reply" | "fol
       followUp: kind === "followup",
       reason: problems.length ? `⚠️ ${problems.join(" ; ")}` : decision.reason,
       phoneOnly: !inWindow,
+      ...(booking ? { booking } : {}),
     },
     header,
     notify: !canAuto,
@@ -239,7 +296,8 @@ async function handle(conv: Conv, brain: Brain, mode: Mode, kind: "reply" | "fol
     const r = await sendDraft(draft.id, "auto");
     await logEvent("insta", `${conv.name} : ${r.ok ? "réponse envoyée" : `échec (${r.error})`}`, r.ok ? "info" : "error");
   }
-  if (["rdv_confirme"].includes(decision.stage) && conv.stage !== "rdv_confirme") {
+  // Avec une réservation iClosed, l'alerte part au moment de la réservation (sendDraft).
+  if (!booking && ["rdv_confirme"].includes(decision.stage) && conv.stage !== "rdv_confirme") {
     await tg.alertLuc(`📅 <b>Appel réservé</b> : ${tg.esc(conv.name)}\n${tg.esc(decision.summary)}`);
   }
   return true;

@@ -30,6 +30,14 @@ Chaque agent a trois modes (tableau de bord → Vue d'ensemble, ou Telegram `/mo
 - **Supervisé** (par défaut) : il prépare, rien ne part sans un clic (Telegram ou onglet « À valider »).
 - **Auto** : il envoie seul ce qui est simple. Bloqué tant que son cerveau contient des `[À REMPLIR]`.
 
+## Prise de rendez-vous (iClosed)
+
+Avec `ICLOSED_API_KEY` dans Vercel, l'agent Insta/Messenger ne donne plus le lien de réservation : il lit les créneaux libres des closers
+(page de réservation du `bookingLink` du cerveau), propose les **2 premiers dans les 48 h** (au moins 2 h à l'avance) **à l'heure du prospect**
+(il demande où il vit si besoin), puis demande prénom, nom et email. La réservation est faite dans iClosed **au moment où le message de confirmation part**
+(donc après ton ✅ en mode supervisé). Si le créneau vient d'être pris, rien ne part, la conversation passe en « je reprends » et tu es alerté.
+Sans clé, ou sans créneau libre, l'agent envoie le lien comme avant.
+
 ## Les cerveaux
 
 Dossier `brains/` : un sous-dossier par agent (documents `.md` + `config.json`). On les modifie dans le dossier puis

@@ -2,6 +2,7 @@ import { db, logEvent } from "./db";
 import * as tg from "./telegram";
 import * as pk from "./plugkit";
 import { sendMail, replySubject, type Mailbox } from "./mail";
+import { bookCall, type Booking } from "./iclosed";
 
 /**
  * Un brouillon = un message prêt à partir, qui attend (mode supervisé) ou non (mode auto).
@@ -87,6 +88,26 @@ export async function sendDraft(id: string, by = "auto"): Promise<{ ok: boolean;
   const d = locked as Draft;
   try {
     if (d.channel === "insta") {
+      // Réservation iClosed d'abord : si le créneau n'est plus libre, le message de confirmation ne part pas.
+      const booking = d.meta.booking as (Booking & { label: string; bookingLink: string }) | undefined;
+      if (booking) {
+        let booked: Awaited<ReturnType<typeof bookCall>>;
+        try {
+          booked = await bookCall(booking.bookingLink, booking);
+        } catch (e) {
+          await db().from("ig_conversations").update({ status: "human" }).eq("id", d.ref_id);
+          await tg.alertLuc(
+            `⚠️ <b>Réservation iClosed impossible</b> (${tg.esc(booking.label)}) pour ${tg.esc(booking.firstName)} ${tg.esc(booking.lastName)} : ${tg.esc(e instanceof Error ? e.message : String(e))}\nLe message n'est pas parti. Conversation passée en « je reprends ».`,
+          );
+          throw new Error(`réservation iClosed refusée (${e instanceof Error ? e.message : e})`);
+        }
+        const { data: conv } = await db().from("ig_conversations").select("name,fields").eq("id", d.ref_id).single();
+        const fields = { ...(conv?.fields ?? {}), rdv: `${booking.label} (${booking.timeZone})`, email: booking.email, ...(booked.closerName ? { closer: booked.closerName } : {}) };
+        await db().from("ig_conversations").update({ stage: "rdv_confirme", fields }).eq("id", d.ref_id);
+        await tg.alertLuc(
+          `📅 <b>Appel réservé dans iClosed</b> : ${tg.esc(booking.firstName)} ${tg.esc(booking.lastName)} (${tg.esc(conv?.name ?? "")})\n${tg.esc(booking.label)} · ${tg.esc(booking.timeZone)}${booked.closerName ? ` · closer : ${tg.esc(booked.closerName)}` : ""}`,
+        );
+      }
       const msgId = await pk.sendMessage(d.ref_id, d.content, `draft-${d.id}`);
       const now = new Date().toISOString();
       await db()

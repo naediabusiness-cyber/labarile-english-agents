@@ -59,6 +59,9 @@ export default async function Installation(props: PageProps<"/admin/installation
         {webhook ? <p className="muted">Webhook : {webhook}</p> : null}
       </Step>
       <Step ok={hasEnv("PLUGKIT_API_KEY", "PLUGKIT_ACCOUNT_ID")} title="6. Instagram DM (PlugKit)">PLUGKIT_API_KEY et PLUGKIT_ACCOUNT_ID.</Step>
+      <Step ok={hasEnv("ICLOSED_API_KEY")} title="6 bis. Créneaux des closers (iClosed, facultatif)">
+        iClosed → Settings → Developers → API Keys → créer une clé, puis ICLOSED_API_KEY dans Vercel et redéployer. L&apos;agent DM propose alors les premiers créneaux libres (48 h max, à l&apos;heure du prospect) et réserve l&apos;appel quand le message part.
+      </Step>
       <Step ok={hasEnv("MAIL_IMAP_HOST", "MAIL_SMTP_HOST", "MAIL_USER", "MAIL_PASSWORD")} title="7. Boîte mail commerciale">
         MAIL_IMAP_HOST, MAIL_SMTP_HOST, MAIL_USER, MAIL_PASSWORD {env("MAIL_USER") ? `(${env("MAIL_USER")})` : ""}
       </Step>
