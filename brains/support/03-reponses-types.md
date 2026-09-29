@@ -5,8 +5,10 @@ L'agent **personnalise toujours** ces modèles (prénom, reprise de la situation
 Variables :
 - `{prénom}` : prénom du client ;
 - `{situation}` : une phrase qui reprend précisément ce que le client a décrit ;
-- `{délai}` : le `responseDelay` de `config.json` ;
-- `[signature]` : la `signature` de `config.json`.
+- `{délai}` : « 24 h ouvrées » (service client du lundi au vendredi, 9 h – 18 h, heure de Paris) ;
+- `[signature]` : la `signature` de `config.json` :
+  L'équipe support Labarile English
+  support@labarileenglish.com
 
 ---
 
@@ -100,7 +102,10 @@ Historique des échanges : {lien ou résumé}
 >
 > Désolé(e) pour ce souci d'accès, voyons ça ensemble. Pouvez-vous essayer les étapes suivantes :
 >
-> [À REMPLIR : étapes de dépannage de base, ex. lien de réinitialisation du mot de passe, vérifier les spams, essayer un autre navigateur]
+> - vous connecter à Skool avec l'adresse email utilisée lors de votre achat ;
+> - vérifier vos courriers indésirables (spams), au cas où l'invitation ou l'email de connexion s'y trouverait ;
+> - utiliser « mot de passe oublié » sur la page de connexion ;
+> - essayer un autre navigateur ou un autre appareil.
 >
 > Si le problème persiste, indiquez-moi l'appareil utilisé et le message qui s'affiche : je transmets aussitôt à l'équipe technique.
 >
@@ -135,7 +140,7 @@ Historique des échanges : {lien ou résumé}
 >
 > Merci pour votre message, votre demande de rétractation est bien enregistrée à la date d'aujourd'hui.
 >
-> L'équipe vérifie votre situation au regard de nos conditions générales de vente ([À REMPLIR : lien vers les CGV]) et vous répond sous {délai}.
+> L'équipe vérifie votre situation au regard de nos conditions générales de vente (disponibles sur www.labarileenglish.com, lien « CGV » en bas de page) et revient vers vous sous {délai}.
 >
 > Bien à vous,
 > [signature]
@@ -147,4 +152,48 @@ Historique des échanges : {lien ou résumé}
 > Je me permets de clôturer votre demande, puisque tout semble réglé. Si vous avez la moindre question, il vous suffit de répondre à ce message.
 >
 > Belle journée,
+> [signature]
+
+## 12. English Mastery Pass : résiliation
+
+> Bonjour {prénom},
+>
+> Merci pour votre message. Bien sûr, vous pouvez résilier votre English Mastery Pass à tout moment et sans frais, directement depuis votre espace personnel.
+>
+> La résiliation prend effet à la fin du mois déjà payé : vous gardez donc vos accès jusque-là (le mois entamé n'est pas remboursé).
+>
+> Si vous préférez que l'on s'en occupe pour vous, il vous suffit de me confirmer votre nom et l'adresse email utilisée lors de l'achat.
+>
+> Bien à vous,
+> [signature]
+
+## 13. Demande de suspension
+
+> Bonjour {prénom},
+>
+> Merci de nous avoir prévenus, et je comprends tout à fait que vous ayez besoin de faire une pause.
+>
+> Pour information, une suspension est possible une fois pendant le programme, pour une durée de 30 jours maximum, pour un motif légitime et justifié, en la demandant au moins 7 jours à l'avance. Les mensualités continuent pendant cette période.
+>
+> Pour que je transmette votre demande à l'équipe, pouvez-vous m'indiquer :
+> - vos nom et prénom, et l'adresse email utilisée lors de l'achat ;
+> - les dates souhaitées ;
+> - le motif, en quelques mots (inutile de donner des détails personnels).
+>
+> L'équipe revient ensuite vers vous sous {délai}.
+>
+> Bien à vous,
+> [signature]
+
+## 14. Retard de démarrage du coaching privé
+
+> Bonjour {prénom},
+>
+> Merci pour votre message, et je suis sincèrement désolé(e) pour cette attente. Je comprends que ce soit frustrant alors que vous étiez prêt(e) à commencer.
+>
+> Je transmets votre dossier en priorité à l'équipe pour qu'elle revienne vers vous rapidement avec une date de démarrage. {si des informations manquent : « Pour aller plus vite, pouvez-vous me confirmer l'adresse email utilisée lors de votre achat et la date de celui-ci ? »}
+>
+> En attendant, vos accès à la plateforme et aux cours collectifs restent bien ouverts.
+>
+> Bien à vous,
 > [signature]

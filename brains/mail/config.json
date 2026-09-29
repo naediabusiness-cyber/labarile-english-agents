@@ -1,18 +1,40 @@
 {
   "categories": [
-    { "id": "prospect", "label": "Prospect", "action": "reply" },
-    { "id": "question", "label": "Question", "action": "reply" },
-    { "id": "partenariat", "label": "Partenariat / presse", "action": "escalate" },
-    { "id": "support", "label": "Support client", "action": "forward_support" },
-    { "id": "spam", "label": "Spam / newsletter", "action": "ignore" }
+    {
+      "id": "prospect",
+      "label": "Prospect",
+      "action": "reply"
+    },
+    {
+      "id": "question",
+      "label": "Question",
+      "action": "reply"
+    },
+    {
+      "id": "partenariat",
+      "label": "Partenariat / presse",
+      "action": "escalate"
+    },
+    {
+      "id": "support",
+      "label": "Support client",
+      "action": "forward_support"
+    },
+    {
+      "id": "spam",
+      "label": "Spam / newsletter",
+      "action": "ignore"
+    }
   ],
-  "bookingLink": "[À REMPLIR : lien de réservation, ex. Calendly]",
-  "signature": "[À REMPLIR : signature des mails, ex. prénom, fonction, Labarile English, site web]",
+  "bookingLink": "https://app.iclosed.io/e/luclabarile/parle-anglais-sous-90-jours-labarile-english-dm",
+  "signature": "L'équipe Labarile English\ncontact@labarileenglish.com · +41 78 210 72 72 · www.labarileenglish.com",
   "escalateWhen": [
     "Demande de partenariat, presse, influence ou sponsoring",
-    "Entreprise qui souhaite former plusieurs salariés",
+    "Entreprise qui souhaite former plusieurs salariés (audit, tests de niveau, groupes)",
+    "Demande pour une autre langue que l'anglais",
     "La personne demande à parler à Luc ou à un humain",
-    "Question factuelle sans réponse dans les cerveaux (prix précis, financement, contrat, facture)",
+    "Question factuelle sans réponse dans les cerveaux (financement OPCO/employeur, contrat, facture, détail d'une formule)",
+    "La personne évoque une mauvaise expérience de pression commerciale lors d'un entretien",
     "Colère, menace, menace juridique ou d'avis négatif",
     "Détresse, santé ou situation personnelle sensible",
     "Doute sur la catégorie du mail",

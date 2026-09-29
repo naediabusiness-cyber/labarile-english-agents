@@ -2,14 +2,15 @@
   "name": "labarile-agents",
   "version": "1.0.0",
   "private": true,
-  "description": "Labarile English — agents IA : Instagram (DM + stories), mails + setting, support client.",
+  "description": "Labarile English \u2014 agents IA : Instagram (DM + stories), mails + setting, support client.",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
     "typecheck": "next typegen && tsc --noEmit",
-    "brain:push": "node scripts/push-brain.mjs"
+    "brain:push": "node scripts/push-brain.mjs",
+    "photos:push": "node scripts/push-photos.mjs"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.129.0",

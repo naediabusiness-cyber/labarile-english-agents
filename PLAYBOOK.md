@@ -87,8 +87,10 @@ Instagram doit être un **compte professionnel** (Paramètres → Type de compte
    ```
    APP_URL=https://labarile-agents.vercel.app
    ADMIN_PASSWORD=...
+   SUPABASE_URL=...
+   SUPABASE_SERVICE_ROLE_KEY=...
    ```
-   (Ces deux lignes suffisent pour `npm run brain:push`.)
+   (`APP_URL` + `ADMIN_PASSWORD` servent à `npm run brain:push` ; les deux Supabase à `npm run photos:push`.)
 
 ✅ Vérification : ouvrir l'adresse → page de connexion → entrer avec `ADMIN_PASSWORD`.
 Aller dans **Installation** → étapes 1 et 2 cochées → **étape 3 : Enregistrer** l'adresse de l'app.
@@ -97,15 +99,13 @@ Aller dans **Installation** → étapes 1 et 2 cochées → **étape 3 : Enregis
 
 ## Phase 5 — Les cerveaux
 
-1. Ouvrir `brains/README.md` et remplir les `[À REMPLIR : …]` **avec Luc**, en priorité :
-   1. le lien de réservation de l'appel (`insta/config.json`, `mail/config.json`) ;
-   2. l'appel : nom, durée, format, qui le mène (`insta/03-offre.md`) ;
-   3. tu ou vous (`insta/02-voix.md`, `mail/02-voix.md`, `stories/01-ligne-editoriale.md`) ;
-   4. le financement : Qualiopi, CPF, OPCO ? (`insta/03-offre.md`) ;
-   5. pour qui c'est / pour qui ce n'est pas ;
-   6. la politique support : CGV, remboursements, rétractation 14 jours, délais, médiateur (`support/02-politique.md`) ;
-   7. les signatures des mails ; le mot-clé des stories ;
-   8. de **vrais DM et mails de Luc** comme exemples de voix.
+1. Les cerveaux sont déjà remplis avec les vrais éléments de Labarile English (site, FAQ, CGV, avis Trustpilot,
+   lien de réservation iClosed, pas de CPF) : voir `brains/SOURCES-labarile.md`. **Relire avec Luc** et corriger si besoin.
+   Il reste 9 `[À REMPLIR : …]` :
+   1. la durée de l'entretien de candidature (`insta/03-offre.md`, `insta/01-methode.md`, `mail/03-reponses-types.md`) ;
+   2. de **vrais DM de Luc** (`insta/02-voix.md`) et de vraies conversations annotées (`insta/05-exemples.md`) ;
+   3. de vrais mails de l'équipe (`mail/02-voix.md`) ;
+   4. le mot-clé que les gens envoient en DM après une story (`stories/config.json` → `ctaKeyword`).
 2. Pousser : `npm run brain:push`
 3. On peut aussi tout modifier ensuite dans **Cerveaux** du tableau de bord.
 
@@ -167,15 +167,23 @@ Autres fournisseurs (OVH, Ionos, Zoho…) : utiliser leurs adresses IMAP/SMTP. O
 
 ## Phase 9 — Stories (publication Instagram)
 
-1. **Identité graphique** : tableau de bord → Réglages → couleurs, logo (PNG), police (.ttf). Déposer logo et photos dans Stories → Photos.
-2. **Accès Meta** (connexion Instagram) :
+1. **Identité graphique** : la charte v2.0 est déjà intégrée (couleurs, Bebas Neue / Roboto / Roboto Mono).
+   Il reste à ajouter le **logo** : deux PNG transparents (version foncée et version blanche), à déposer dans
+   Supabase → Storage → bucket `photos` → dossier `logo/`, puis coller leurs adresses publiques dans Réglages.
+2. **Photos de Luc** : télécharger le dossier Google Drive des photos (clic droit → Télécharger), le dézipper, puis :
+   ```bash
+   npm run photos:push -- ~/Downloads/<dossier-des-photos>
+   ```
+   (il faut `SUPABASE_URL` et `SUPABASE_SERVICE_ROLE_KEY` dans `.env.local`). Chaque photo est recadrée au format
+   story et compressée. Les gabarits « citation » et « appel » en utilisent une au hasard, avec le voile de la charte.
+3. **Accès Meta** (connexion Instagram) :
    1. https://developers.facebook.com → **Create App** → type « Business ».
    2. Ajouter le produit **Instagram** → « API setup with Instagram login ».
    3. Ajouter le compte Instagram de Labarile → **Generate token** (permissions `instagram_business_basic` et `instagram_business_content_publish`).
    4. Copier le **jeton** et l'**Instagram user ID** affichés.
-3. Vercel : `META_IG_USER_ID`, `META_ACCESS_TOKEN` (laisser `META_GRAPH_HOST=graph.instagram.com`) → Redeploy.
+4. Vercel : `META_IG_USER_ID`, `META_ACCESS_TOKEN` (laisser `META_GRAPH_HOST=graph.instagram.com`) → Redeploy.
    Le jeton est renouvelé automatiquement chaque semaine. Si Telegram signale un échec de renouvellement, régénérer le jeton et le remettre dans Vercel.
-4. Vue d'ensemble → Stories → **Supervisé**. Stories → **✨ Générer** pour un premier essai → **🚀 Publier**.
+5. Vue d'ensemble → Stories → **Supervisé**. Stories → **✨ Générer** pour un premier essai → **🚀 Publier**.
 
 ✅ Vérification : la story apparaît sur le compte Instagram.
 

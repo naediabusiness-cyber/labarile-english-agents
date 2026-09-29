@@ -1,26 +1,46 @@
 {
   "templates": [
-    { "id": "astuce", "label": "Astuce du jour" },
-    { "id": "erreur", "label": "Erreur fréquente" },
-    { "id": "citation", "label": "Citation / motivation" },
-    { "id": "question", "label": "Question" },
-    { "id": "appel", "label": "Invitation à l'appel" }
+    {
+      "id": "astuce",
+      "label": "Astuce du jour"
+    },
+    {
+      "id": "erreur",
+      "label": "Erreur fréquente"
+    },
+    {
+      "id": "citation",
+      "label": "Citation / motivation"
+    },
+    {
+      "id": "question",
+      "label": "Question"
+    },
+    {
+      "id": "appel",
+      "label": "Invitation à l'appel"
+    }
   ],
   "perWeek": 7,
-  "postingHours": ["12:30", "19:00"],
+  "postingHours": [
+    "12:30",
+    "19:00"
+  ],
   "ctaKeyword": "[À REMPLIR : mot-clé à envoyer en DM, ex. ANGLAIS]",
   "themes": [
+    "Parler avant de savoir",
+    "Comprehensible input : s'exposer à un anglais qu'on comprend",
+    "Peur de parler et peur de l'erreur",
+    "Accent : être compris plutôt que parfait",
     "Faux amis (actually, eventually, library…)",
     "Traductions mot à mot à éviter",
+    "Temps verbaux (present perfect, for / since)",
     "Anglais en réunion",
     "Préparer un entretien d'embauche en anglais",
-    "Écrire un email professionnel en anglais",
     "Anglais pour voyager",
     "Prononciation (th, h aspiré, voyelles longues)",
-    "Temps verbaux (present perfect, for / since)",
     "Expressions idiomatiques du quotidien",
-    "Oser parler malgré la peur de faire des fautes",
-    "Construire une routine d'apprentissage courte",
-    "Comprendre les accents"
+    "Les automatismes avant les règles de grammaire",
+    "Construire une routine d'anglais courte au quotidien"
   ]
 }

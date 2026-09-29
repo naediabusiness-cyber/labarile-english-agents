@@ -1,92 +1,92 @@
+import { readFile } from "node:fs/promises";
+import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import type { Brand } from "./settings";
 
 /**
- * Rendu d'une story 1080×1920 aux couleurs de Labarile (réglages → identité graphique).
+ * Rendu d'une story 1080×1920 selon la charte graphique Labarile English v2.0 :
+ * titres en Bebas Neue (capitales), texte en Roboto Light, étiquettes en Roboto Mono,
+ * rampe de bleus-gris, couleur logo réservée au bouton d'appel à l'action (une fois par écran).
  * Cinq gabarits : astuce, erreur, citation, question, appel.
  */
 
 export type StoryContent = { template: string; title: string; body: string; cta: string | null; photo_url: string | null };
 
-const CHIP: Record<string, string> = {
+const LABEL: Record<string, string> = {
   astuce: "ASTUCE DU JOUR",
   erreur: "ERREUR FRÉQUENTE",
-  citation: "MOTIVATION",
-  question: "À TOI DE JOUER",
-  appel: "PARLONS-EN",
+  citation: "PARLER AVANT DE SAVOIR",
+  question: "À VOUS DE JOUER",
+  appel: "ENTRETIEN OFFERT",
 };
 
-async function loadFont(url: string): Promise<ArrayBuffer | null> {
-  if (!url) return null;
-  try {
-    const res = await fetch(url, { signal: AbortSignal.timeout(10_000) });
-    return res.ok ? await res.arrayBuffer() : null;
-  } catch {
-    return null;
-  }
+type Fonts = { name: string; data: ArrayBuffer; weight: 300 | 400 | 500; style: "normal" }[];
+let fontsCache: Fonts | null = null;
+
+async function fonts(): Promise<Fonts> {
+  if (fontsCache) return fontsCache;
+  const dir = join(process.cwd(), "lib", "fonts");
+  const load = async (f: string) => {
+    const b = await readFile(join(dir, f));
+    return b.buffer.slice(b.byteOffset, b.byteOffset + b.byteLength) as ArrayBuffer;
+  };
+  fontsCache = [
+    { name: "Bebas", data: await load("bebas-neue-400.woff"), weight: 400, style: "normal" },
+    { name: "Roboto", data: await load("roboto-300.woff"), weight: 300, style: "normal" },
+    { name: "Roboto", data: await load("roboto-500.woff"), weight: 500, style: "normal" },
+    { name: "Mono", data: await load("roboto-mono-500.woff"), weight: 500, style: "normal" },
+  ];
+  return fontsCache;
+}
+
+/** Fond et couleurs de chaque gabarit (fonds clairs : Blanc / Clair 01 ; fonds foncés : Profond 04 / 05). */
+function theme(template: string, brand: Brand, hasPhoto: boolean) {
+  if (hasPhoto || template === "citation" || template === "appel") return { bg: brand.primary, fg: "#ffffff", dark: true };
+  if (template === "question") return { bg: brand.secondary, fg: "#ffffff", dark: true };
+  if (template === "erreur") return { bg: brand.light, fg: brand.primary, dark: false };
+  return { bg: brand.background, fg: brand.text, dark: false };
 }
 
 export async function renderStory(s: StoryContent, brand: Brand): Promise<ImageResponse> {
-  const font = await loadFont(brand.fontUrl);
-  const dark = !!s.photo_url || s.template === "appel";
-  const fg = dark ? "#FFFFFF" : brand.text;
-  const bg = s.template === "appel" ? brand.primary : brand.background;
-  const titleSize = s.title.length > 28 ? 92 : 112;
+  const t = theme(s.template, brand, !!s.photo_url);
+  const title = s.template === "citation" ? `« ${s.title} »` : s.title;
+  const titleSize = title.length > 26 ? 150 : title.length > 16 ? 180 : 210;
+  const logo = t.dark ? brand.logoWhiteUrl : brand.logoUrl;
 
   return new ImageResponse(
     (
-      <div
-        style={{
-          width: "100%",
-          height: "100%",
-          display: "flex",
-          flexDirection: "column",
-          position: "relative",
-          backgroundColor: bg,
-          color: fg,
-          fontFamily: font ? "Brand" : "sans-serif",
-        }}
-      >
+      <div style={{ width: "100%", height: "100%", display: "flex", position: "relative", backgroundColor: t.bg, color: t.fg, fontFamily: "Roboto" }}>
         {s.photo_url ? (
           // eslint-disable-next-line @next/next/no-img-element
-          <img src={s.photo_url} alt="" width={1080} height={1920} style={{ position: "absolute", top: 0, left: 0, objectFit: "cover" }} />
+          <img src={s.photo_url} alt="" width={1080} height={1920} style={{ position: "absolute", top: 0, left: 0, width: 1080, height: 1920, objectFit: "cover" }} />
         ) : null}
         {s.photo_url ? (
-          <div style={{ position: "absolute", top: 0, left: 0, width: 1080, height: 1920, backgroundColor: "rgba(0,0,0,0.55)", display: "flex" }} />
+          // Voile de contraste (charte : jamais de logo ni de texte sur photo chargée sans voile).
+          <div style={{ position: "absolute", top: 0, left: 0, width: 1080, height: 1920, display: "flex", backgroundImage: `linear-gradient(180deg, ${brand.primary}99 0%, ${brand.primary}cc 45%, ${brand.primary}f2 100%)` }} />
         ) : null}
 
-        <div style={{ display: "flex", flexDirection: "column", flexGrow: 1, padding: "180px 90px 220px", position: "relative" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 24 }}>
-            {brand.logoUrl ? (
+        <div style={{ display: "flex", flexDirection: "column", width: "100%", padding: "170px 96px 190px", position: "relative" }}>
+          {/* En-tête : logo, ou « LABARILE » en Bebas + « ENGLISH » en mono */}
+          <div style={{ display: "flex", alignItems: "center" }}>
+            {logo ? (
               // eslint-disable-next-line @next/next/no-img-element
-              <img src={brand.logoUrl} alt="" height={90} style={{ objectFit: "contain" }} />
+              <img src={logo} alt="" height={110} style={{ objectFit: "contain" }} />
             ) : (
-              <div style={{ fontSize: 44, fontWeight: 700, letterSpacing: 2 }}>{brand.name.toUpperCase()}</div>
+              <div style={{ display: "flex", alignItems: "baseline", gap: 18 }}>
+                <div style={{ fontFamily: "Bebas", fontSize: 92, letterSpacing: 4, lineHeight: 1 }}>LABARILE</div>
+                <div style={{ fontFamily: "Mono", fontWeight: 500, fontSize: 30, letterSpacing: 8 }}>ENGLISH</div>
+              </div>
             )}
           </div>
 
           <div style={{ display: "flex", flexDirection: "column", flexGrow: 1, justifyContent: "center" }}>
-            <div
-              style={{
-                display: "flex",
-                alignSelf: "flex-start",
-                backgroundColor: s.template === "erreur" ? brand.accent : dark ? "rgba(255,255,255,0.15)" : brand.primary,
-                color: "#FFFFFF",
-                fontSize: 36,
-                fontWeight: 700,
-                letterSpacing: 3,
-                padding: "14px 30px",
-                borderRadius: 999,
-                marginBottom: 56,
-              }}
-            >
-              {CHIP[s.template] ?? "LABARILE ENGLISH"}
+            <div style={{ display: "flex", alignItems: "center", gap: 22, marginBottom: 40 }}>
+              <div style={{ width: 64, height: 4, backgroundColor: t.fg, opacity: 0.7, display: "flex" }} />
+              <div style={{ fontFamily: "Mono", fontWeight: 500, fontSize: 32, letterSpacing: 7, opacity: 0.85 }}>{LABEL[s.template] ?? "LABARILE ENGLISH"}</div>
             </div>
-            <div style={{ display: "flex", fontSize: titleSize, fontWeight: 800, lineHeight: 1.1, marginBottom: 56 }}>
-              {s.template === "citation" ? `« ${s.title} »` : s.title}
-            </div>
+            <div style={{ display: "flex", fontFamily: "Bebas", fontSize: titleSize, lineHeight: 0.9, textTransform: "uppercase", marginBottom: 56 }}>{title}</div>
             {s.body ? (
-              <div style={{ display: "flex", fontSize: 54, lineHeight: 1.35, opacity: 0.92, whiteSpace: "pre-wrap" }}>{s.body}</div>
+              <div style={{ display: "flex", fontWeight: 300, fontSize: 54, lineHeight: 1.45, whiteSpace: "pre-wrap" }}>{s.body}</div>
             ) : null}
           </div>
 
@@ -96,24 +96,24 @@ export async function renderStory(s: StoryContent, brand: Brand): Promise<ImageR
                 display: "flex",
                 justifyContent: "center",
                 backgroundColor: brand.accent,
-                color: "#FFFFFF",
-                fontSize: 50,
-                fontWeight: 700,
-                padding: "34px 40px",
-                borderRadius: 28,
+                color: "#1d1d1b",
+                fontWeight: 500,
+                fontSize: 48,
+                padding: "36px 40px",
+                borderRadius: 20,
                 textAlign: "center",
+                marginBottom: 40,
               }}
             >
               {s.cta}
             </div>
           ) : null}
+          <div style={{ display: "flex", justifyContent: "center", fontFamily: "Mono", fontWeight: 500, fontSize: 28, letterSpacing: 6, opacity: 0.7 }}>
+            {brand.handle.toUpperCase()}
+          </div>
         </div>
       </div>
     ),
-    {
-      width: 1080,
-      height: 1920,
-      ...(font ? { fonts: [{ name: "Brand", data: font, style: "normal" as const, weight: 700 as const }] } : {}),
-    },
+    { width: 1080, height: 1920, fonts: await fonts() },
   );
 }

@@ -18,7 +18,7 @@ insert into settings (key, value) values
   ('cron_secret', to_jsonb(encode(gen_random_bytes(24), 'hex'))),
   ('modes', '{"insta":"off","mail":"off","support":"off","stories":"off"}'),
   ('quiet_hours', '{"start":"22:00","end":"08:00"}'),
-  ('brand', '{"name":"Labarile English","primary":"#0B2545","secondary":"#13315C","accent":"#E63946","background":"#F7F4EE","text":"#0B2545","logoUrl":"","fontUrl":""}')
+  ('brand', '{"name":"Labarile English","handle":"@labarile.english","primary":"#333e47","secondary":"#495c64","light":"#a5d7d8","accent":"#6dc5d5","background":"#fafafa","text":"#333e47","logoUrl":"","logoWhiteUrl":""}')
 on conflict (key) do nothing;
 
 -- Cerveaux : un par agent (insta, mail, support, stories)

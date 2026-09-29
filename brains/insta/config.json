@@ -27,18 +27,18 @@
     },
     {
       "id": "proposition_appel",
-      "label": "Proposition de l'appel",
-      "goal": "Reformuler et vérifier, demander la permission, présenter l'appel comme un moment convivial pour faire le point ensemble sans engagement, proposer le lien ou deux créneaux en laissant la personne libre."
+      "label": "Proposition de l'entretien",
+      "goal": "Reformuler et vérifier, demander la permission, présenter l'entretien de candidature comme gratuit et sans engagement (faire le point sur l'anglais, identifier ce qui bloque, découvrir le plan le plus adapté), proposer le lien de réservation en laissant la personne libre."
     },
     {
       "id": "rdv_confirme",
       "label": "Rendez-vous confirmé",
-      "goal": "Confirmer chaleureusement date et heure, rassurer, indiquer simplement quoi préparer, envoyer un rappel bienveillant, reprogrammer sans reproche en cas d'absence."
+      "goal": "Confirmer chaleureusement date et heure de l'entretien, rassurer (gratuit, sans engagement, zéro jugement), indiquer simplement quoi préparer, envoyer un rappel bienveillant, reprogrammer sans reproche en cas d'absence."
     },
     {
       "id": "hors_cible",
       "label": "Hors cible",
-      "goal": "Remercier et expliquer avec gentillesse et honnêteté que l'offre ne correspond pas, orienter vers une ressource si possible, ne pas proposer d'appel."
+      "goal": "Remercier et expliquer avec gentillesse que l'offre ne correspond pas (CPF indispensable, mineur seul, contenu gratuit uniquement, autre besoin), orienter vers la chaîne YouTube gratuite, ne pas proposer d'entretien."
     },
     {
       "id": "perdu",
@@ -46,12 +46,22 @@
       "goal": "Refus, demande d'arrêt ou absence de réponse après 3 relances bienveillantes : un dernier message chaleureux au plus, puis plus aucun message."
     }
   ],
-  "bookingLink": "[À REMPLIR : lien de réservation, ex. Calendly]",
+  "bookingLink": "https://app.iclosed.io/e/luclabarile/parle-anglais-sous-90-jours-labarile-english-dm",
   "allowedLinks": [
     {
       "key": "booking",
-      "label": "Réserver l'appel",
-      "url": "[À REMPLIR : lien de réservation, ex. Calendly]"
+      "label": "Réserver l'entretien de candidature",
+      "url": "https://app.iclosed.io/e/luclabarile/parle-anglais-sous-90-jours-labarile-english-dm"
+    },
+    {
+      "key": "site",
+      "label": "Site Labarile English",
+      "url": "https://www.labarileenglish.com"
+    },
+    {
+      "key": "youtube",
+      "label": "Chaîne YouTube gratuite",
+      "url": "https://www.youtube.com/@labarileenglish"
     }
   ],
   "forbiddenWords": [
@@ -74,16 +84,25 @@
     "€",
     "euros",
     "réduction",
-    "code promo"
+    "code promo",
+    "2500",
+    "2 500",
+    "2.500",
+    "en 90 jours",
+    "sous 90 jours",
+    "en 3 mois",
+    "résultat garanti"
   ],
   "escalateWhen": [
     "La personne demande à parler à Luc ou à un humain",
-    "Question factuelle sans réponse dans les cerveaux (prix précis, financement, dates, contrat)",
-    "Client existant qui signale un problème, une réclamation ou demande un remboursement",
+    "Question factuelle sans réponse dans les cerveaux (financement OPCO/employeur, dates, contrat, détails d'une formule)",
+    "Client existant qui signale un problème, une réclamation, un retard de démarrage ou demande un remboursement (→ support)",
+    "La personne évoque une mauvaise expérience de pression commerciale lors d'un entretien précédent",
+    "Demande entreprise (former plusieurs salariés, audit, tests de niveau)",
+    "Demande pour une autre langue que l'anglais",
     "Colère, menace, propos agressifs ou menace d'avis négatif",
     "Détresse, santé ou situation personnelle sensible",
     "Demande de partenariat, presse ou collaboration",
-    "Personne mineure",
     "L'agent n'est pas sûr de sa réponse"
   ],
   "maxFollowUps": 3,

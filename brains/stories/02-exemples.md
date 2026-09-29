@@ -1,8 +1,6 @@
 # Exemples de stories
 
-Huit exemples qui respectent la ligne éditoriale (titre ≤ 40 caractères, texte ≤ 160 caractères). Ils sont rédigés au vouvoiement : adaptez-les si Luc choisit le tutoiement. `MOT-CLÉ` sera remplacé par le `ctaKeyword` de `config.json`.
-
-Remplacez ou complétez ces exemples par des stories réelles de Luc qui ont bien fonctionné.
+Huit exemples qui respectent la ligne éditoriale (titre ≤ 32 caractères, affiché en capitales ; texte ≤ 160 caractères ; vouvoiement). Quand le `ctaKeyword` de `config.json` sera défini, les CTA « Réservez votre entretien (lien en bio) » pourront devenir « Envoyez MOT-CLÉ en DM ».
 
 ## 1. Erreur fréquente
 
@@ -48,46 +46,46 @@ Remplacez ou complétez ces exemples par des stories réelles de Luc qui ont bie
 }
 ```
 
-## 5. Citation / motivation
+## 5. Citation / méthode
 
 ```json
 {
   "template": "citation",
-  "title": "Parler avant d'être prêt",
-  "body": "On ne devient pas à l'aise en anglais puis on parle. On parle, et c'est comme ça qu'on devient à l'aise.",
+  "title": "Parler avant de savoir",
+  "body": "On n'apprend pas une langue en la révisant. On l'apprend en la parlant, assez souvent pour que la confusion devienne de la confiance.",
   "cta": ""
 }
 ```
 
-## 6. Astuce (avant / après)
+## 6. Astuce (comprehensible input)
 
 ```json
 {
   "template": "astuce",
-  "title": "Faire répéter poliment",
-  "body": "Pour faire répéter, « Sorry, could you say that again? » passe mieux qu'un simple « What? ».",
+  "title": "Écoutez ce que vous comprenez",
+  "body": "Choisissez une série ou un podcast où vous comprenez presque tout. Mieux vaut beaucoup d'anglais compréhensible qu'un peu d'anglais trop difficile.",
   "cta": ""
 }
 ```
 
-## 7. Erreur fréquente (prononciation / usage)
+## 7. Peur de parler
 
 ```json
 {
-  "template": "erreur",
-  "title": "« I have 30 years » ? Non !",
-  "body": "En anglais, on « est » son âge : « I am 30 » ou « I'm 30 years old ». Jamais « I have 30 years ».",
-  "cta": "Partagez à un ami qui la fait"
+  "template": "citation",
+  "title": "Peur de faire des fautes ?",
+  "body": "Vous en savez sûrement plus que vous ne le pensez. Ce qui bloque, c'est souvent la peur de l'erreur, pas le vocabulaire. Chez nous : zéro jugement.",
+  "cta": "Partagez à qui en a besoin"
 }
 ```
 
-## 8. Invitation à l'appel
+## 8. Invitation à l'entretien
 
 ```json
 {
   "template": "appel",
-  "title": "Bloqué(e) à l'oral en anglais ?",
-  "body": "Vous comprenez mais les mots ne viennent pas ? Faisons le point sur votre anglais lors d'un appel avec l'équipe.",
-  "cta": "Envoyez MOT-CLÉ en DM"
+  "title": "Vous comprenez mais bloquez ?",
+  "body": "Faisons le point sur votre anglais lors d'un entretien avec notre équipe, gratuit et sans engagement. Votre niveau n'est que votre point de départ.",
+  "cta": "Réservez votre entretien (lien en bio)"
 }
 ```

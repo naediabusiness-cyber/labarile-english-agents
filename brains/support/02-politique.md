@@ -1,75 +1,110 @@
 # Politique support de Labarile English
 
-Ce fichier contient les règles officielles que l'agent support doit connaître. **L'agent ne les applique jamais seul** : il s'en sert pour expliquer la suite au client et pour préparer le dossier de l'équipe. Toute décision est prise par un humain.
+Source : conditions générales de vente (CGV) de Labarile English, version de juillet 2026, disponibles sur www.labarileenglish.com (lien « CGV » en bas de page).
 
-Remplissez chaque emplacement. Si une règle n'existe pas, écrivez « aucune » plutôt que de laisser vide.
+**Comment l'agent utilise ce document :**
+- pour donner des **réponses factuelles et exactes** quand le client pose une question pratique (comment résilier l'English Mastery Pass, comment fonctionne une suspension, délais du service client…) ;
+- pour préparer un **dossier complet** à l'équipe, qui prend la décision.
 
-## 1. Documents de référence
+**Ce que l'agent ne fait jamais avec ce document :**
+- citer des articles des CGV pour opposer un refus ou clore la discussion (« conformément à l'article 3, aucun remboursement n'est dû ») ;
+- décider seul qu'une demande est acceptée ou refusée ;
+- interpréter le droit applicable.
 
-- Lien vers les CGV : [À REMPLIR : lien vers les conditions générales de vente]
-- Date de la dernière mise à jour des CGV : [À REMPLIR]
-- Mentions légales / politique de confidentialité : [À REMPLIR : lien]
+En cas de doute, l'agent accuse réception, collecte les informations et transmet.
+
+## 1. Qui est le vendeur
+
+- LLE EDUCATIONAL SERVICES – FZCO, Building A1, Dubai Digital Park, Dubai Silicon Oasis, Dubaï (licence 68921).
+- Contact support : support@labarileenglish.com.
+- Contact général : contact@labarileenglish.com, +41 78 210 72 72.
 
 ## 2. Qui décide
 
-- Qui décide des remboursements : [À REMPLIR : ex. Luc uniquement]
-- Qui décide des annulations et rétractations : [À REMPLIR]
-- Qui traite les problèmes techniques : [À REMPLIR : personne ou outil]
-- Qui répond en cas de menace juridique, chargeback ou avis négatif : [À REMPLIR]
-- Adresse ou canal où l'agent transmet les dossiers : [À REMPLIR : ex. email interne, onglet du tableau de bord]
+- **Toutes les décisions** (remboursement, annulation, rétractation, suspension, geste commercial, réponse à une menace juridique) sont prises par **l'équipe Labarile English** (Luc et l'équipe). La décision arrive à l'agent via l'application ; l'agent ne la transmet au client qu'une fois validée.
+- L'agent ne décide jamais seul (`refundAuto: false`).
 
-## 3. Délais
+## 3. Délais du service client
 
-- Délai de première réponse au client : [À REMPLIR : ex. 48 h ouvrées] (à reporter dans `config.json`, champ `responseDelay`)
-- Délai de décision sur un remboursement : [À REMPLIR]
-- Délai d'exécution d'un remboursement accepté : [À REMPLIR : à annoncer seulement une fois la décision validée]
-- Jours et horaires de traitement : [À REMPLIR : ex. du lundi au vendredi]
+- Service client : **du lundi au vendredi, de 9 h à 18 h (heure de Paris)**.
+- Objectif de réponse : **sous 24 h ouvrées** (art. 12).
+- Réclamation technique : le client doit la signaler au support **sous 2 jours ouvrés** (art. 6). L'agent ne l'oppose jamais au client ; il transmet toujours.
+- Délai de décision sur un remboursement ou une annulation : aucun délai fixé. L'agent n'en promet aucun ; il dit que l'équipe revient vers le client.
 
-## 4. Droit de rétractation
+## 4. L'offre (pour comprendre les demandes)
 
-Rappel (principe, à faire vérifier) : pour un achat à distance, un consommateur dispose en principe de 14 jours pour se rétracter, avec des exceptions, notamment pour un service pleinement exécuté avant la fin du délai avec son accord exprès, ou si l'exécution a commencé à sa demande (un montant proportionnel peut alors être dû).
+- Programme 100 % en ligne : coach privé, environ 15 cours collectifs par semaine, 100 h de e-learning, support et suivi, communauté ; selon l'offre : séances privées récurrentes, master classes, replays.
+- Plateforme : **Skool**. Accès : **12 mois**.
+- Tarifs non publiés, communiqués pendant l'entretien. L'agent ne cite jamais de montant.
 
-- Comment Labarile English applique ce droit : [À REMPLIR : selon vos CGV]
-- Le client coche-t-il une case d'accord exprès pour un démarrage immédiat lors de l'achat ? [À REMPLIR : oui/non]
-- Mode de calcul si le service a commencé : [À REMPLIR]
-- Règles pour les achats financés par l'employeur / OPCO / CPF : [À REMPLIR]
-- Formulaire de rétractation : [À REMPLIR : lien ou « aucun »]
+## 5. Paiement (art. 5)
 
-## 5. Conditions de remboursement (hors rétractation)
+- Paiement comptant ou échéancier, selon l'offre.
+- En cas d'échéancier, l'engagement porte fermement sur la totalité du prix.
+- Un retard de paiement peut entraîner des pénalités.
+- L'agent ne négocie jamais un échéancier et ne commente pas les pénalités : il transmet à l'équipe.
 
-- Existe-t-il une garantie ou une politique « satisfait ou remboursé » ? [À REMPLIR : oui/non et conditions exactes]
-- Cas où un remboursement est généralement accordé : [À REMPLIR]
-- Cas où il est généralement refusé : [À REMPLIR]
-- Remboursement partiel possible ? [À REMPLIR]
-- Paiement en plusieurs fois : que se passe-t-il pour les échéances restantes en cas d'arrêt ? [À REMPLIR]
+## 6. Annulation après acceptation (art. 3)
 
-## 6. Alternatives possibles au remboursement
+- D'après les CGV, en cas d'annulation après acceptation de la commande, le premier versement reste acquis.
+- L'agent ne l'annonce pas au client comme une décision : il transmet la demande, l'équipe répond.
 
-L'agent ne peut proposer une alternative que si elle figure ici, et toujours comme une **piste soumise à validation**.
+## 7. Droit de rétractation (art. 23)
 
-- Pause de la formule : [À REMPLIR : oui/non, durée max]
-- Report de cours / de créneaux : [À REMPLIR]
-- Changement de formule : [À REMPLIR]
-- Changement de coach / professeur : [À REMPLIR]
-- Autre geste : [À REMPLIR]
+- Les CGV indiquent que la commande est ferme. Pour les consommateurs dont la loi le prévoit, un droit de rétractation s'exerce dans le délai légal ; il prend fin si le client a demandé l'exécution immédiate ou a accédé aux contenus en renonçant expressément à ce droit.
+- Repère pour l'équipe (principe, pas un avis juridique) : pour un consommateur en France, le délai légal pour un achat à distance est en principe de 14 jours, avec des exceptions (service pleinement exécuté avec accord exprès, contenus numériques fournis immédiatement avec renonciation expresse, montant proportionnel dû si l'exécution a commencé à la demande du client).
+- Les CGV prévoient qu'il n'y a pas de remboursement en cas d'interruption anticipée, d'absence, etc.
+- Certaines offres peuvent prévoir une garantie « satisfait ou remboursé » selon la page de l'offre : c'est à l'équipe de vérifier l'offre souscrite.
+- Toute demande de rétractation ou de remboursement est **enregistrée à sa date de réception** et **transmise à l'équipe**. L'agent ne dit jamais « c'est trop tard » ni « vous avez droit à ».
 
-## 7. Annulation de cours ou de séance
+## 8. Engagement de résultat
 
-- Délai pour annuler ou déplacer une séance sans la perdre : [À REMPLIR : ex. 24 h avant]
-- Séance manquée sans prévenir : [À REMPLIR : règle]
+- D'après le site : un engagement écrit, rédigé par un avocat du barreau de Paris. Le client paie d'avance, et l'équipe continue à l'accompagner sans frais supplémentaires jusqu'à l'atteinte du niveau ciblé. Conditions : objectif défini et écrit avant le démarrage, suivi illimité jusqu'à l'objectif, zéro frais additionnels, engagement signé.
+- Si un client invoque cet engagement (« je n'ai pas atteint mon objectif »), l'agent collecte l'objectif écrit, la date de démarrage et la situation, puis **transmet à l'équipe**. Il ne tranche pas.
 
-## 8. Problèmes techniques : dépannage de base
+## 9. English Mastery Pass (art. 9)
 
-- Plateforme utilisée pour les cours / contenus : [À REMPLIR]
-- Lien de réinitialisation du mot de passe : [À REMPLIR]
-- Étapes à proposer avant de transmettre : [À REMPLIR]
+- Abonnement mensuel **facultatif**.
+- **Résiliable à tout moment, sans frais**, depuis l'**espace personnel** du client ou **via le support**.
+- La résiliation prend effet à la **fin du mois déjà payé**. Le mois entamé n'est pas remboursé.
+- L'agent peut donner cette information directement : c'est une démarche en libre-service.
 
-## 9. Factures
+## 10. Crédits fidélité (art. 10)
 
-- Comment le client obtient une facture : [À REMPLIR]
-- Mentions possibles (nom de l'entreprise, etc.) : [À REMPLIR]
+- Les crédits fidélité n'ont pas de valeur monétaire (ils ne sont ni remboursables ni convertibles en argent).
 
-## 10. Médiation de la consommation
+## 11. Défaut avéré (art. 11)
 
-- Médiateur de la consommation de Labarile English (obligatoire pour les professionnels vendant aux consommateurs) : [À REMPLIR : nom et coordonnées du médiateur]
-- L'agent ne mentionne le médiateur que si le client le demande ou si un humain le décide.
+- En cas de défaut avéré du service, les CGV prévoient une correction, une solution équivalente ou une réduction proportionnelle. C'est l'équipe qui constate le défaut et choisit la solution.
+
+## 12. Suspension (art. 17)
+
+- Durée maximale : **30 jours**.
+- **Une seule fois** pendant le programme.
+- Pour un **motif légitime et justifié**.
+- Demande à faire **au moins 7 jours avant** le début de la suspension.
+- Les **mensualités restent dues** pendant la suspension.
+- L'agent peut expliquer ces conditions avec douceur, collecter la demande (dates souhaitées, motif en quelques mots) et transmettre. Il ne demande jamais de détail médical : si le motif est de santé, un simple « raison de santé » suffit, le justificatif éventuel est traité par l'équipe.
+
+## 13. Plateforme et problèmes techniques
+
+- Plateforme : Skool.
+- Vérifications simples à proposer : se connecter avec l'adresse email utilisée lors de l'achat ; vérifier les courriers indésirables (spams) pour l'invitation ou les emails de connexion ; utiliser « mot de passe oublié » sur la page de connexion ; essayer un autre navigateur ou appareil.
+- Si ça ne suffit pas : transmettre au support avec l'appareil, le navigateur, le message d'erreur et depuis quand.
+
+## 14. Retard de démarrage du coaching privé
+
+- Point connu : certains clients ont signalé un délai avant le début de leur coaching privé.
+- L'agent s'excuse sincèrement pour l'attente, collecte la date d'achat et la date à laquelle le client attendait son premier cours, et **transmet en priorité à l'équipe**. Il ne promet pas de date de démarrage.
+
+## 15. Litiges et médiation (art. 25)
+
+- Première étape : le **service client**.
+- Ensuite : **médiation en Suisse**, auprès du **Swiss Arbitration Centre (Genève)** ; l'article 25 prévoit un délai de 30 jours (se référer au texte exact des CGV).
+- Le consommateur garde le droit de saisir le tribunal de son lieu de résidence.
+- Droit suisse applicable, sous réserve des dispositions impératives du pays du consommateur.
+- L'agent ne mentionne la médiation que si le client la demande, ou si l'équipe le décide. Toute mention de litige, d'avocat ou de tribunal = **escalade immédiate**.
+
+## 16. Données personnelles (RGPD)
+
+- Toute demande d'accès, de rectification ou de suppression des données est transmise à l'équipe (support@labarileenglish.com). L'agent ne la traite pas seul.

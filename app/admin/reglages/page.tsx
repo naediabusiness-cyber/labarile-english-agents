@@ -5,13 +5,15 @@ export const dynamic = "force-dynamic";
 
 const FIELDS = [
   ["name", "Nom affiché", "text"],
-  ["primary", "Couleur principale", "color"],
-  ["secondary", "Couleur secondaire", "color"],
-  ["accent", "Couleur d'accent (boutons, CTA)", "color"],
-  ["background", "Fond des stories", "color"],
-  ["text", "Couleur du texte", "color"],
-  ["logoUrl", "Logo (URL d'un PNG, idéalement fond transparent)", "url"],
-  ["fontUrl", "Police (URL d'un fichier .ttf ou .otf)", "url"],
+  ["handle", "Compte Instagram (pied de story)", "text"],
+  ["primary", "Profond 05 (blocs pleins, texte)", "color"],
+  ["secondary", "Profond 04", "color"],
+  ["light", "Clair 01 (fonds clairs)", "color"],
+  ["accent", "Couleur logo (bouton d'appel à l'action, une fois par story)", "color"],
+  ["background", "Blanc (fond)", "color"],
+  ["text", "Texte sur fond clair", "color"],
+  ["logoUrl", "Logo complet, version foncée (URL d'un PNG transparent)", "url"],
+  ["logoWhiteUrl", "Logo complet, version blanche (URL d'un PNG transparent)", "url"],
 ] as const;
 
 export default async function Settings() {
@@ -28,7 +30,7 @@ export default async function Settings() {
             <input id={k} name={k} type={type} defaultValue={brand[k]} style={type === "color" ? { width: 90, height: 40, padding: 2 } : undefined} />
           </div>
         ))}
-        <p className="small muted">Astuce : dépose le logo et la police dans la section Photos de la page Stories (ou dans Supabase → Storage → photos) et colle ici leur adresse publique.</p>
+        <p className="small muted">Valeurs par défaut : charte graphique v2.0. Polices intégrées (Bebas Neue, Roboto, Roboto Mono). Pour le logo : le déposer dans Supabase → Storage → bucket « photos » (dossier <code>logo/</code>) et coller ici son adresse publique.</p>
         <button className="primary" type="submit" style={{ marginTop: 10 }}>Enregistrer</button>
       </form>
 

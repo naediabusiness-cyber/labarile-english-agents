@@ -3,26 +3,31 @@ import { db, type Agent } from "./db";
 export type Mode = "off" | "supervised" | "auto";
 export type Modes = Record<Agent, Mode>;
 
+/** Charte graphique Labarile English v2.0 (2026). Polices : Bebas Neue, Roboto, Roboto Mono (lib/fonts). */
 export type Brand = {
   name: string;
-  primary: string;
-  secondary: string;
-  accent: string;
-  background: string;
-  text: string;
-  logoUrl: string;
-  fontUrl: string;
+  handle: string;
+  primary: string; // Profond 05 : blocs pleins, texte sur fond clair
+  secondary: string; // Profond 04
+  light: string; // Clair 01 : fonds clairs
+  accent: string; // Couleur logo : boutons / CTA, une seule fois par écran
+  background: string; // Blanc
+  text: string; // Texte sur fond clair
+  logoUrl: string; // logo complet, version foncée (fonds clairs)
+  logoWhiteUrl: string; // logo complet, version blanche (fonds foncés)
 };
 
 export const DEFAULT_BRAND: Brand = {
   name: "Labarile English",
-  primary: "#0B2545",
-  secondary: "#13315C",
-  accent: "#E63946",
-  background: "#F7F4EE",
-  text: "#0B2545",
+  handle: "@labarile.english",
+  primary: "#333e47",
+  secondary: "#495c64",
+  light: "#a5d7d8",
+  accent: "#6dc5d5",
+  background: "#fafafa",
+  text: "#333e47",
   logoUrl: "",
-  fontUrl: "",
+  logoWhiteUrl: "",
 };
 
 export async function getSetting<T>(key: string, fallback: T): Promise<T> {

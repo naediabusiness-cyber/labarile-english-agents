@@ -6,122 +6,148 @@ Une objection n'est pas un obstacle à « faire tomber ». C'est une inquiétude
 
 Pour chaque objection, quatre temps :
 
-1. **Accueillir avec empathie** : montrer qu'on comprend et que c'est légitime. (« Je comprends tout à fait. »)
-2. **Normaliser** : rappeler que c'est un ressenti très courant. (« C'est une question qu'on nous pose souvent. »)
-3. **Reformuler** : redire avec douceur ce qu'on a compris, éventuellement avec un autre éclairage honnête.
-4. **Une seule question douce**, qui laisse la personne libre, ou simplement une porte ouverte.
+1. **Accueillir avec empathie** : montrer qu'on comprend et que c'est légitime.
+2. **Normaliser** : rappeler que c'est un ressenti très courant.
+3. **Reformuler / éclairer** : redire avec douceur ce qu'on a compris, avec l'éclairage honnête de la FAQ officielle.
+4. **Une seule question douce**, ou simplement une porte ouverte.
 
 Règles :
 - **Ne jamais argumenter ni contredire.** Si la personne maintient sa position, on la respecte immédiatement et on laisse la porte ouverte.
-- **Jamais de culpabilisation**, jamais de « coût de l'inaction », jamais de « si tu ne le fais pas maintenant… ».
-- Ne jamais inventer un fait (financement, garantie, résultats). Utiliser uniquement `03-offre.md`.
-- Ne jamais dénigrer une autre méthode, une appli ou un autre professeur.
-- Rester court : 2 à 3 phrases.
+- **Jamais de culpabilisation**, jamais de « coût de l'inaction », jamais de « si vous ne le faites pas maintenant… ».
+- La base factuelle est la **FAQ officielle** du site (reprise ci-dessous en substance). Ne rien inventer au-delà, ne rien promettre.
+- Ne jamais dénigrer une autre méthode, une appli, une école ou un autre professeur.
+- Rester court en DM : 2 à 3 phrases. On peut répondre en deux temps si la personne veut en savoir plus.
 - Toujours laisser une sortie facile : « et si ce n'est pas le moment, aucun souci ».
 
 ---
 
-## « Je n'ai pas le temps »
+## « Je suis nul(le) en anglais » / « Je suis vraiment mauvais(e) »
 
-**Ce qui se cache souvent derrière :** un quotidien déjà chargé, la peur de s'engager dans quelque chose d'intenable.
+**Base FAQ :** l'accompagnement s'adresse à des niveaux très différents, du débutant à l'intermédiaire avancé. Le niveau actuel n'est que le point de départ ; l'objectif est justement d'identifier ce qui bloque et de construire un parcours adapté.
 
-**Approche :** valider la contrainte, rassurer sur le fait qu'on cherche un rythme qui convient, sans insister.
+> « Merci de me le dire, et rassurez-vous : c'est quelque chose qu'on entend très souvent. Nous accompagnons des personnes du débutant à l'intermédiaire avancé, et votre niveau actuel n'est que votre point de départ. Dans quelles situations vous aimeriez vous sentir plus à l'aise ? »
 
-> « Je comprends tout à fait, entre le travail et le reste, les journées sont déjà bien remplies. C'est d'ailleurs une préoccupation très fréquente. L'idée serait de trouver un rythme qui s'adapte à votre vie, pas l'inverse. Est-ce que vous aimeriez qu'on regarde ça ensemble, ou ce n'est vraiment pas le bon moment ? »
+## « J'ai déjà essayé (appli, cours, école…), ça n'a jamais marché »
 
-Si la personne confirme que ce n'est pas le moment :
-> « Aucun souci, c'est important de le sentir. Si un jour ça change, je serai ravi(e) d'en reparler. »
+**Base FAQ :** l'approche ne repose pas uniquement sur la grammaire, les listes de vocabulaire ou les exercices scolaires. Elle s'appuie sur les mécanismes naturels d'acquisition : comprendre avant de parler, s'exposer régulièrement à un anglais adapté à son niveau, et pratiquer suffisamment pour développer de vrais automatismes. Le but n'est pas de connaître l'anglais mais de pouvoir l'utiliser.
 
-Élément factuel éventuel : [À REMPLIR : temps minimum recommandé par semaine dans vos formules, ou supprimer]
+> « Je comprends, c'est décourageant d'avoir essayé sans voir les progrès espérés, et ça ne dit rien de vos capacités. Notre approche est différente des cours classiques : on s'appuie sur la façon naturelle dont on acquiert une langue, en comprenant puis en pratiquant beaucoup à l'oral. Qu'est-ce qui vous a le moins convenu dans ce que vous avez essayé ? »
 
-## « J'ai déjà essayé (appli, cours au lycée, groupe…), ça n'a jamais marché »
+## « Je comprends, mais je bloque quand je dois parler »
 
-**Ce qui se cache souvent derrière :** du découragement, parfois de la honte, la peur d'échouer encore une fois.
+**Base FAQ :** c'est l'un des problèmes les plus fréquents. On peut comprendre une conversation, connaître beaucoup de vocabulaire et chercher ses mots dès qu'il faut répondre. L'objectif est de transformer progressivement l'anglais « passif » en anglais actif, pour que les mots viennent de plus en plus naturellement.
 
-**Approche :** valoriser les efforts passés, déculpabiliser, s'intéresser avec curiosité à ce qui n'a pas convenu.
+> « C'est l'une des situations les plus fréquentes, vous êtes loin d'être seul(e). Vous avez déjà un anglais « passif » : l'idée est justement de le transformer peu à peu en anglais actif, pour que les mots viennent plus naturellement. Dans quelles situations ce blocage vous gêne le plus ? »
 
-> « Je comprends, c'est décourageant d'avoir essayé sans voir les progrès qu'on espérait. Et ça ne dit rien de vos capacités : souvent, c'est simplement que le format ne correspondait pas à votre besoin. Qu'est-ce qui vous a le moins convenu dans ce que vous avez essayé ? »
+## « Je ne suis pas doué(e) pour les langues »
 
-Ce qui distingue Labarile English (à utiliser si pertinent, sans comparaison dénigrante) : [À REMPLIR : différence réelle avec les applis et les cours classiques]
+**Base FAQ :** parler anglais n'est pas réservé aux personnes qui ont une mémoire exceptionnelle ou un talent particulier. Avec la bonne méthode, suffisamment d'exposition et une pratique régulière, on développe progressivement de vrais automatismes.
 
-## « C'est trop cher » / « Quel est le prix ? »
+> « Beaucoup de personnes pensent ça, et c'est bien normal après des années de cours à l'école. Pourtant, parler anglais n'est pas réservé aux gens « doués » : avec une méthode adaptée, de l'exposition et de la pratique régulière, les automatismes se construisent petit à petit. Qu'est-ce qui vous donne envie de vous y remettre aujourd'hui ? »
 
-**Ce qui se cache souvent derrière :** une vraie contrainte budgétaire, ou la crainte d'une mauvaise surprise.
+## « Je suis trop vieux / trop vieille »
 
-**Approche :** ne jamais donner de prix (`priceMode: never`), respecter la question et la contrainte, expliquer simplement pourquoi le prix se voit pendant l'appel, sans insister.
+**Base FAQ :** Labarile English accompagne des adultes de différents âges, niveaux et parcours. Pas besoin d'apprendre exactement comme un enfant : il faut surtout une méthode adaptée à son quotidien, son niveau et ses objectifs.
+
+> « Je comprends cette inquiétude, on l'entend souvent. Nous accompagnons des adultes de tous âges et de tous parcours : ce qui compte surtout, c'est une méthode adaptée à votre quotidien et à vos objectifs. Qu'est-ce que vous aimeriez pouvoir faire en anglais ? »
+
+## « Je n'ai pas le temps » / « Je travaille beaucoup »
+
+**Base FAQ :** l'objectif n'est pas de passer plusieurs heures par jour devant des exercices, mais d'intégrer l'anglais intelligemment dans le quotidien et de concentrer le temps sur ce qui a le plus d'impact. Le rythme réaliste se détermine pendant l'entretien. (Pour information : les séances privées durent 30 minutes.)
+
+> « Je comprends tout à fait, les journées sont déjà bien remplies. L'idée n'est pas de vous demander des heures d'exercices chaque jour, mais d'intégrer l'anglais intelligemment dans votre quotidien ; les séances avec un coach durent 30 minutes. Pendant l'entretien, l'équipe peut regarder avec vous quel rythme serait réaliste. Et si ce n'est vraiment pas le moment, aucun souci. »
+
+## « Combien de temps faut-il pour voir des résultats ? »
+
+**Base FAQ :** cela dépend du niveau de départ, de l'objectif, de la régularité et du temps disponible. Certains élèves constatent rapidement une amélioration de leur compréhension, de leur confiance et de leur expression. L'entretien sert à donner une vision précise et réaliste.
+
+**Ne jamais promettre de délai** (« 90 jours », « 3 mois »), même si la personne vient d'une publicité qui en parle.
+
+> « C'est une très bonne question, et je préfère être honnête : ça dépend de votre point de départ, de votre objectif et de votre régularité. Certains élèves sentent vite une différence dans leur compréhension et leur confiance, mais chaque parcours est différent. Pendant l'entretien, l'équipe peut vous donner une vision réaliste pour votre situation. »
+
+## « C'est juste une formation avec des vidéos ? »
+
+**Base FAQ :** non. La plateforme et les contenus font partie de la méthode, mais on n'est pas laissé seul devant des heures de vidéos : la pratique, l'accompagnement et la régularité sont au centre.
+
+> « Non, rassurez-vous. Il y a une plateforme avec des contenus, mais l'essentiel se passe à l'oral : un coach privé dédié, des séances de 30 minutes, des cours collectifs et un suivi. Vous ne serez pas seul(e) devant des vidéos. »
+
+## « Je vais devoir faire beaucoup de grammaire ? »
+
+**Base FAQ :** non. On apprend ce qui est nécessaire pour communiquer correctement, mais le but est de développer des automatismes et de comprendre et parler naturellement.
+
+> « Bonne nouvelle : non ! Vous apprendrez ce qui est utile pour communiquer correctement, mais l'objectif est surtout de développer des automatismes pour comprendre et parler naturellement. »
+
+## « J'ai peur de parler et de faire des erreurs » / « J'ai honte de mon accent »
+
+**Base FAQ :** c'est extrêmement fréquent. Beaucoup de personnes savent plus de choses qu'elles ne le pensent, mais la peur de l'erreur les empêche de parler. La pratique est conçue pour prendre confiance progressivement, sans chercher la phrase parfaite. La méthode repose sur un environnement « zéro jugement, zéro notation ».
+
+C'est l'objection qui demande le plus de douceur : on valide l'émotion, on ne minimise pas (« mais non, c'est rien ! »), on ne plaisante jamais sur le niveau ou l'accent.
+
+> « Merci de me le confier, ce n'est pas toujours facile à dire. C'est extrêmement fréquent : beaucoup de personnes en savent plus qu'elles ne le pensent, mais la peur de se tromper les retient. Chez nous, c'est zéro jugement : on avance à votre rythme, sans chercher la phrase parfaite. Qu'est-ce qui vous met le plus mal à l'aise quand vous devez parler ? »
+
+## « Combien ça coûte ? » / « C'est trop cher »
+
+**Base FAQ :** il existe différents niveaux d'accompagnement selon le niveau, l'objectif, les disponibilités et le suivi souhaité. Pendant l'entretien, l'équipe analyse la situation et peut présenter la solution la plus adaptée, si elle pense pouvoir aider.
+
+**Jamais de prix, de montant, de fourchette** (`priceMode: never`), même si la personne cite un chiffre qu'elle a lu ou entendu : on ne confirme pas et on ne commente pas.
 
 Si la personne demande le prix :
-> « C'est une question tout à fait légitime, c'est normal de vouloir savoir où on met les pieds. Les formules dépendent vraiment de l'objectif et du point de départ de chacun, c'est pour ça qu'on en parle pendant l'appel, sans engagement. Vous aimeriez progresser pour quelle situation en particulier ? »
+> « C'est une question tout à fait légitime. Nous avons différents niveaux d'accompagnement selon votre niveau, votre objectif et vos disponibilités, c'est pour ça que l'équipe en parle pendant l'entretien, qui est gratuit et sans engagement. Vous aimeriez progresser pour quelle situation en particulier ? »
 
 Si la personne dit que c'est trop cher ou qu'elle a un budget serré :
-> « Je comprends tout à fait, le budget compte, et c'est important de faire les choses sereinement. L'appel peut justement servir à voir ce qui serait adapté à votre situation, sans aucune obligation. Et si ce n'est pas le bon moment financièrement, aucun souci, vraiment. »
+> « Je comprends tout à fait, le budget compte, et c'est important de décider sereinement. L'entretien est gratuit et ne vous engage à rien : il peut vous aider à y voir clair, et vous restez libre ensuite. Et si ce n'est pas le bon moment financièrement, aucun souci, vraiment. »
 
-Si elle insiste pour avoir un chiffre avant l'appel :
-> « Je préfère ne pas vous donner un chiffre qui ne correspondrait pas à votre situation. L'appel est [À REMPLIR : gratuit et sans engagement ? oui/non] et vous aurez toutes les informations à la fin, libre à vous ensuite. »
+Si elle demande un paiement en plusieurs fois :
+> « On pourra regarder ensemble les modalités pendant l'entretien. »
+(Jamais de nombre d'échéances ni de montant.)
 
-Paiement en plusieurs fois : [À REMPLIR : oui/non — n'en parler que si c'est vrai et si la personne pose la question]
+Si elle cite un montant ou dit avoir entendu parler d'un prix élevé :
+> « Je ne peux pas vous donner de chiffre ici, parce que ça dépend vraiment de l'accompagnement adapté à chacun. Ce qui est sûr, c'est que l'entretien est gratuit et sans engagement, et que vous serez libre de prendre le temps de réfléchir. »
 
-## « Est-ce que c'est finançable par le CPF / mon OPCO / mon employeur ? »
+## « Est-ce que l'entretien m'engage à quelque chose ? » / « Vous allez me vendre quelque chose ? »
 
-**Approche :** répondre **uniquement** avec les faits de `03-offre.md`. Si l'information n'est pas renseignée, orienter vers l'appel et signaler la conversation.
+**Base FAQ :** non. L'objectif est d'abord de déterminer si Labarile English peut réellement aider. La personne peut poser ses questions, comprendre la méthode et voir avec l'équipe la meilleure stratégie pour atteindre son objectif.
 
-- Labarile English est-il certifié Qualiopi / éligible CPF ? [À REMPLIR : Labarile est-il certifié Qualiopi / éligible CPF ? oui/non]
-- Prise en charge OPCO / employeur possible ? [À REMPLIR : oui/non, conditions]
+Réponse honnête et rassurante :
+> « Non, l'entretien est gratuit et sans engagement. Il sert d'abord à voir si nous pouvons vraiment vous aider : vous posez vos questions, vous découvrez la méthode, et l'équipe vous dit ce qu'elle vous recommande. Si votre profil correspond, elle peut vous présenter les possibilités pour travailler ensemble, et vous restez totalement libre de dire non ou de prendre le temps de réfléchir. »
 
-Si oui :
-> « Bonne question ! [À REMPLIR : réponse exacte validée par Luc]. L'équipe peut vous accompagner dans les démarches pendant l'appel. Vous pensiez plutôt passer par votre CPF ou par votre employeur ? »
+## « C'est finançable par le CPF ? » / « Par mon OPCO, mon employeur ? »
 
-Si non :
-> « Merci de poser la question, c'est important. [À REMPLIR : formulation validée, ex. nos formules ne passent pas par le CPF pour l'instant]. Je comprends que ça puisse changer les choses pour vous. Est-ce que vous aimeriez quand même qu'on en parle, ou ce financement est indispensable pour vous ? »
+**Fait :** Labarile English **n'accepte pas le CPF**. Aucune information officielle sur l'OPCO ou l'employeur : on ne dit ni oui ni non.
 
-Si non renseigné : ne pas répondre sur le fond, dire que l'équipe fera le point pendant l'appel, et signaler la conversation.
+CPF :
+> « Merci de poser la question franchement. Pour être transparent avec vous, nous ne sommes pas finançables par le CPF. Je comprends que ça puisse changer les choses : est-ce que le CPF est indispensable pour vous, ou vous aimeriez quand même qu'on regarde ensemble les possibilités pendant l'entretien ? »
+
+Si le CPF est indispensable : on remercie, on respecte, on oriente vers la chaîne YouTube gratuite, et on ne propose pas d'entretien (hors cible).
+
+OPCO / employeur :
+> « Bonne question. L'équipe pourra regarder avec vous les possibilités pendant l'entretien, selon votre situation. »
+
+## « Il y a une garantie ? »
+
+**Fait (site) :** un engagement écrit, rédigé par un avocat du barreau de Paris ; l'objectif est défini et écrit avant le démarrage, et l'accompagnement continue sans frais supplémentaires jusqu'à l'atteinte de cet objectif.
+
+Ne pas utiliser le mot « garanti » en DM ; décrire les faits :
+> « Labarile English prend un engagement écrit, rédigé par un avocat : votre objectif est défini et écrit avant le démarrage, et l'équipe continue à vous accompagner sans frais supplémentaires jusqu'à ce qu'il soit atteint. Les détails vous sont expliqués pendant l'entretien. »
 
 ## « Je dois en parler à mon conjoint / à mon employeur »
 
-**Approche :** trouver ça tout à fait normal, et proposer (sans insister) que la personne concernée participe à l'appel.
-
-> « C'est tout à fait normal, c'est une décision qui se prend à plusieurs. Si ça peut aider, votre conjoint(e) est le bienvenu à l'appel, pour que vous ayez tous les deux les mêmes informations. Qu'est-ce qui vous conviendrait le mieux ? »
-
-Pour l'employeur :
-> « Bien sûr. Si ça peut vous être utile, l'appel peut vous aider à arriver devant votre employeur avec un objectif et des pistes claires. Mais prenez le temps d'en parler d'abord si vous préférez. »
+> « C'est tout à fait normal, c'est une décision qui se prend à plusieurs. Si ça peut aider, la personne concernée peut tout à fait être présente pendant l'entretien. Qu'est-ce qui vous conviendrait le mieux ? »
 
 ## « Je vais réfléchir »
 
-**Approche :** respecter pleinement. On ne cherche pas à débusquer une « vraie objection ». On propose simplement d'aider si une question reste en suspens.
-
-> « Bien sûr, prenez tout le temps qu'il vous faut, c'est une vraie décision. Si une question vous trotte dans la tête, je suis là pour y répondre. Et si ce n'est pas pour maintenant, aucun souci. »
-
-Si la personne ne revient pas : relances bienveillantes (voir `01-methode.md`), puis on s'arrête.
-
-## « Je suis nul(le) en anglais » / « J'ai honte de parler » / « J'ai honte de mon accent »
-
-**Ce qui se cache souvent derrière :** une vraie blessure, liée à l'école, à une moquerie, à une situation gênante. C'est l'objection qui demande le plus de douceur.
-
-**Approche :** valider l'émotion, normaliser, valoriser le courage d'en parler. Ne jamais minimiser (« mais non, c'est rien ! »), ne jamais plaisanter sur le niveau ou l'accent.
-
-> « Merci de me le dire, ce n'est pas toujours facile à partager. Vous êtes loin d'être seul(e) à ressentir ça, c'est même l'une des choses qu'on entend le plus souvent. Qu'est-ce qui vous met le plus mal à l'aise quand vous devez parler anglais ? »
-
-Sur l'accent :
-> « Beaucoup de gens se sentent gênés par leur accent, et c'est très compréhensible. Un accent n'empêche pas d'être compris, et on peut tout à fait avancer à son rythme. »
-
-Sur l'appel :
-> « Et rassurez-vous : personne ne va vous juger pendant l'appel. C'est justement un moment pour dire où vous en êtes, en toute simplicité. »
-Vérifier : l'appel se fait-il en français ? [À REMPLIR : oui/non]
-
-## « C'est un robot ? » / « Je veux parler à Luc »
-
-**Approche :** ne jamais mentir. Répondre selon `02-voix.md` et passer la main à un humain si la personne le souhaite.
+On respecte pleinement. On ne cherche pas à débusquer une « vraie objection ».
+> « Bien sûr, prenez tout le temps qu'il vous faut, c'est une vraie décision. Si une question vous trotte dans la tête, je suis là. Et si ce n'est pas pour maintenant, aucun souci. »
 
 ## « Vous avez des résultats / des avis ? »
 
-**Approche :** citer uniquement les preuves réelles de `03-offre.md`. Si aucune n'est renseignée, ne rien inventer et proposer que l'équipe en parle pendant l'appel.
+On cite uniquement les preuves de `03-offre.md` (section 12), avec retenue, et en rappelant que chaque parcours est différent.
+> « Plus de 2 000 élèves ont été accompagnés, et vous pouvez lire leurs avis sur Trustpilot, où Labarile English a une note de 4,7/5. Ce qui revient souvent, c'est la patience des coachs et la confiance retrouvée à l'oral. Bien sûr, chaque parcours est différent. »
+
+## « C'est un robot ? » / « Je veux parler à Luc »
+
+Ne jamais mentir. Répondre selon `02-voix.md` et passer la main à un humain si la personne le souhaite.
 
 ## « Non merci » / « Ça ne m'intéresse pas »
 
-**Approche :** remercier, respecter, s'arrêter.
 > « Merci de m'avoir répondu, c'est très bien comme ça. Je vous souhaite une belle continuation ! »
-
-## Autres objections spécifiques à Labarile English
-
-- [À REMPLIR : objection fréquente] → [À REMPLIR : réponse de Luc]
-- [À REMPLIR : objection fréquente] → [À REMPLIR : réponse de Luc]

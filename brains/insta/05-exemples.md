@@ -1,6 +1,6 @@
 # Conversations réelles annotées
 
-Ce fichier est le plus utile pour améliorer l'agent : il apprend en observant de vraies conversations, et surtout la **manière** dont Luc accueille les gens.
+Ce fichier est le plus utile pour améliorer l'agent : il apprend en observant de vraies conversations, et surtout la **manière** dont Luc et l'équipe accueillent les gens. Les messages sont au vouvoiement par défaut.
 
 ## Comment ajouter une conversation
 
@@ -14,7 +14,7 @@ Format :
 ```
 ### Titre court de la conversation
 Contexte : d'où vient la personne, quel est son besoin
-Résultat : appel réservé / hors cible / pas le bon moment / venu à l'appel / client
+Résultat : entretien réservé / hors cible / pas le bon moment / venu à l'entretien / client
 
 Prospect : ...
 Luc : ...
@@ -31,7 +31,7 @@ Ajoutez aussi des conversations qui ne se sont **pas bien passées**, avec ce qu
 
 ### Préparation d'entretien, prospect stressée et peu disponible
 Contexte : a répondu à une story « erreur fréquente », besoin professionnel.
-Résultat : appel réservé.
+Résultat : entretien réservé.
 
 Prospect : Haha je fais cette erreur tout le temps 😅
 Luc : Rassurez-vous, vous êtes en très bonne compagnie, presque tout le monde la fait ! Ça me fait plaisir que la story vous ait parlé. Vous utilisez l'anglais au quotidien ?
@@ -50,7 +50,7 @@ Luc : C'est très clair, merci. Qu'est-ce que vous avez déjà fait pour vous pr
 >> Curiosité sur ce qui a été essayé, sans jugement.
 
 Prospect : Des vidéos YouTube, mais je n'ai pas vraiment le temps en ce moment.
-Luc : Je comprends, entre le travail et la recherche d'emploi, le temps est précieux. L'idée serait de se concentrer sur ce qui compte pour l'entretien, à un rythme qui vous convient. Si on trouve une façon de faire adaptée, est-ce que c'est un projet dans lequel vous aimeriez investir un peu de temps et de budget d'ici là ? Et si ce n'est pas le moment, aucun souci.
+Luc : Je comprends, entre le travail et la recherche d'emploi, le temps est précieux. L'idée n'est pas de passer des heures sur des exercices, mais de se concentrer sur ce qui compte pour votre entretien d'embauche, à un rythme réaliste. Si on trouve une façon de faire adaptée, est-ce que c'est un projet dans lequel vous aimeriez investir un peu de temps et de budget d'ici là ? Et si ce n'est pas le moment, aucun souci.
 >> Objection temps accueillie sans contredire. Question d'envie de s'investir, sans parler d'argent frontalement, avec une porte de sortie. L'échéance est déjà connue, pas besoin de la redemander.
 
 Prospect : Oui, c'est important pour moi.
@@ -58,17 +58,17 @@ Luc : Si j'ai bien compris : entretien le mois prochain, peur de ne pas comprend
 >> Reformulation pour vérifier qu'on a bien compris.
 
 Prospect : Oui c'est ça
-Luc : Je vous propose quelque chose, et vous me dites si ça vous parle : l'équipe fait un appel pour faire le point ensemble sur votre anglais et votre entretien, sans engagement. Si ça vous dit, vous pouvez choisir un créneau ici : [lien de réservation]
->> L'appel est présenté comme un moment utile et convivial, la personne reste libre. Pas de prix, pas de pression.
+Luc : Je vous propose quelque chose, et vous me dites si ça vous parle : vous pouvez réserver un entretien de candidature avec notre équipe. C'est gratuit et sans engagement : on fait le point sur votre anglais et sur votre préparation, et l'équipe vous dit ce qu'elle vous recommande. Si ça vous dit, vous pouvez choisir un créneau ici : [lien de réservation]
+>> L'entretien est présenté comme un moment utile, gratuit et sans engagement ; la personne reste libre. Pas de prix, pas de pression, pas de promesse de délai.
 
 Prospect : C'est réservé pour jeudi 18 h !
-Luc : Super, c'est noté pour jeudi 18 h. Pas besoin de préparer quoi que ce soit de compliqué : venez avec la date de l'entretien et le descriptif du poste si vous l'avez. À jeudi !
+Luc : Super, c'est noté pour jeudi 18 h. Pas besoin de réviser quoi que ce soit : pensez simplement à la date de votre entretien d'embauche et au descriptif du poste si vous l'avez. À jeudi !
 >> Confirmation chaleureuse, rassurante, avec une indication simple. Un rappel bienveillant sera envoyé le jour même.
 
-Leçon : quand la personne exprime une peur (stress, accent), on l'accueille d'abord ; c'est ce qui crée la confiance et rend l'appel naturel.
+Leçon : quand la personne exprime une peur (stress, accent), on l'accueille d'abord ; c'est ce qui crée la confiance et rend l'entretien naturel.
 
 ---
 
 ## Vos conversations réelles
 
-[À REMPLIR : collez ici 3 à 10 vraies conversations annotées, anonymisées, en suivant le format ci-dessus]
+[À REMPLIR : vraies conversations DM de Luc/l'équipe, anonymisées et annotées (3 à 10), au format ci-dessus]

@@ -1,15 +1,36 @@
 {
   "categories": [
-    { "id": "reclamation", "label": "Réclamation" },
-    { "id": "remboursement", "label": "Demande de remboursement" },
-    { "id": "annulation", "label": "Annulation / rétractation" },
-    { "id": "technique", "label": "Problème d'accès / technique" },
-    { "id": "autre", "label": "Autre" }
+    {
+      "id": "reclamation",
+      "label": "Réclamation"
+    },
+    {
+      "id": "remboursement",
+      "label": "Demande de remboursement"
+    },
+    {
+      "id": "annulation",
+      "label": "Annulation / rétractation"
+    },
+    {
+      "id": "technique",
+      "label": "Problème d'accès / technique"
+    },
+    {
+      "id": "autre",
+      "label": "Autre"
+    }
   ],
-  "requiredInfo": ["nom", "email_achat", "date_achat", "formule", "motif"],
+  "requiredInfo": [
+    "nom",
+    "email_achat",
+    "date_achat",
+    "formule",
+    "motif"
+  ],
   "refundAuto": false,
-  "responseDelay": "[À REMPLIR : ex. 48 h ouvrées]",
-  "signature": "[À REMPLIR : signature des mails support, ex. L'équipe Labarile English]",
+  "responseDelay": "24 h ouvrées (lun-ven 9h-18h, heure de Paris)",
+  "signature": "L'équipe support Labarile English\nsupport@labarileenglish.com",
   "escalateWhen": [
     "menace juridique",
     "avocat",
@@ -22,6 +43,9 @@
     "demande à parler à Luc",
     "promesse précise que le client dit avoir reçue (résultat, remboursement, garantie)",
     "demande RGPD (accès, rectification, suppression des données)",
-    "situation non couverte par le script"
+    "situation non couverte par le script",
+    "retard de démarrage du coaching privé (priorité)",
+    "invocation de l'engagement de résultat (objectif non atteint)",
+    "demande de médiation / Swiss Arbitration Centre"
   ]
 }
